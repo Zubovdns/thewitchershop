@@ -31,6 +31,26 @@ function MainScreen() {
 					<p className='MainScreen-body-quotation-text-2'>-Геральд из Ривии</p>
 				</div>
 			</div>
+			<div className='MainScreen-body'>
+				<img className='MainScreen-body-image' src={witcherEmblemImg} />
+				<div className='MainScreen-body-quotation'>
+					<p className='MainScreen-body-quotation-text-1'>
+						Если приходится выбирать между одним злом и другим, я предпочитаю не
+						выбирать вообще
+					</p>
+					<p className='MainScreen-body-quotation-text-2'>-Геральд из Ривии</p>
+				</div>
+			</div>
+			<div className='MainScreen-body'>
+				<img className='MainScreen-body-image' src={witcherEmblemImg} />
+				<div className='MainScreen-body-quotation'>
+					<p className='MainScreen-body-quotation-text-1'>
+						Если приходится выбирать между одним злом и другим, я предпочитаю не
+						выбирать вообще
+					</p>
+					<p className='MainScreen-body-quotation-text-2'>-Геральд из Ривии</p>
+				</div>
+			</div>
 		</div>
 	);
 }

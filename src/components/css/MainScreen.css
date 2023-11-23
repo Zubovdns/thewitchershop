@@ -1,14 +1,15 @@
 .MainScreen {
-	height: 100vh;
 	width: 100%;
+	height: 0;
+	padding-bottom: 56.25%;
 	background-color: black;
 	display: flex;
 	flex-direction: column;
 }
 
 .MainScreen-header {
-	margin-top: 20px;
-	height: 8vh;
+	margin-top: 1.3vw;
+	height: 2vw;
 	width: 100%;
 	background-color: black;
 	display: flex;
@@ -17,16 +18,16 @@
 }
 
 .MainScreen-header-text {
-	font-size: 20px;
+	font-size: 1.5vw;
 	text-decoration: none;
 	color: #b3b4b4;
 }
 
 .MainScreen-header-input {
 	background-color: #b3b4b4;
-	height: 3.5vh;
-	width: 30vh;
-	padding: 10px;
+	width: 20vw;
+	height: 1vw;
+	padding: 0.8vw;
 	border: 3px solid black;
 	border-radius: 15px;
 	box-sizing: border-box;
@@ -38,43 +39,40 @@
 }
 
 .MainScreen-header-image {
-	width: 3vh;
+	width: 2vw;
 }
 
 .MainScreen-body {
-	background-color: black;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	margin: 100px;
+	margin: 2vw;
 }
 
 .MainScreen-body-image {
-	margin-top: 30px;
-	margin-left: 100px;
-	width: 40%;
+	margin-top: 1vw;
+	margin-left: 10vw;
+	width: 35vw;
 }
 
 .MainScreen-body-quotation {
 	display: flex;
 	flex-direction: column;
-	margin: 70px;
+	margin: 10vw;
 }
 
 .MainScreen-body-quotation-text-1,
 .MainScreen-body-quotation-text-2 {
 	color: #b3b4b4;
 	font-family: Inter;
-	font-size: 30px;
+	font-size: 2.5vw;
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
-	/* margin: 30px; */
 }
 
 .MainScreen-body-quotation-text-1 {
 	text-align: center;
-	margin-top: 0px;
 }
 
 .MainScreen-body-quotation-text-2 {
