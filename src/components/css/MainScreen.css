@@ -1,0 +1,81 @@
+.MainScreen {
+	height: 100vh;
+	width: 100%;
+	background-color: black;
+	display: flex;
+	flex-direction: column;
+}
+
+.MainScreen-header {
+	height: 8vh;
+	width: 100%;
+	background-color: black;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.MainScreen-header-text {
+	font-size: 20px;
+	text-decoration: none;
+	color: #b3b4b4;
+}
+
+.MainScreen-header-input {
+	background-color: #b3b4b4;
+	height: 3.5vh;
+	width: 30vh;
+	padding: 10px;
+	border: 3px solid black;
+	border-radius: 15px;
+	box-sizing: border-box;
+	caret-color: black;
+}
+
+.MainScreen-header-input:focus {
+	outline: none;
+}
+
+.MainScreen-header-image {
+	width: 3vh;
+}
+
+.MainScreen-body {
+	background-color: black;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 100px;
+}
+
+.MainScreen-body-image {
+	margin-top: 30px;
+	margin-left: 100px;
+	width: 40%;
+}
+
+.MainScreen-body-quotation {
+	display: flex;
+	flex-direction: column;
+	margin: 70px;
+}
+
+.MainScreen-body-quotation-text-1,
+.MainScreen-body-quotation-text-2 {
+	color: #b3b4b4;
+	font-family: Inter;
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	/* margin: 30px; */
+}
+
+.MainScreen-body-quotation-text-1 {
+	text-align: center;
+	margin-top: 0px;
+}
+
+.MainScreen-body-quotation-text-2 {
+	text-align: right;
+}
