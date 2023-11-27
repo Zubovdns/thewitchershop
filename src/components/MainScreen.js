@@ -28,7 +28,7 @@ function MainScreen() {
 						Если приходится выбирать между одним злом и другим, я предпочитаю не
 						выбирать вообще
 					</p>
-					<p className='MainScreen-body-quotation-text-2'>-Геральд из Ривии</p>
+					<p className='MainScreen-body-quotation-text-2'>-Геральт из Ривии</p>
 				</div>
 			</div>
 			<div className='MainScreen-body'>
