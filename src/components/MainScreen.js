@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import Carousel from './carousel/Carousel';
 import './css/MainScreen.css';
+import placeholder from './img/Placeholder_img.png';
 import basketImg from './img/basket_img.png';
 import posterBottom1 from './img/poster_bottom_1_img.jpeg';
 import posterBottom2 from './img/poster_bottom_2_img.jpeg';
@@ -75,6 +77,107 @@ function MainScreen() {
 							/>
 						</div>
 					</div>
+				</div>
+				<div className='MainScreen-card-set'>
+					<p className='MainScreen-card-set-label'>Рекомендуем</p>
+					<Carousel>
+						<div className='MainScreen-card-set-item'>
+							<div className='MainScreen-card-set-item-content'>
+								<img
+									className='MainScreen-card-set-item-content-image'
+									src={placeholder}
+								/>
+								<div className='MainScreen-card-set-item-content-label-content'>
+									<p className='MainScreen-card-set-item-content-label'>
+										Кружка “Белый Волк”
+									</p>
+									<p className='MainScreen-card-set-item-content-price'>
+										$14.99
+									</p>
+								</div>
+							</div>
+						</div>
+						<div className='MainScreen-card-set-item'>
+							<div className='MainScreen-card-set-item-content'>
+								<img
+									className='MainScreen-card-set-item-content-image'
+									src={placeholder}
+								/>
+								<div className='MainScreen-card-set-item-content-label-content'>
+									<p className='MainScreen-card-set-item-content-label'>
+										Кружка “Белый Волк”
+									</p>
+									<p className='MainScreen-card-set-item-content-price'>
+										$14.99
+									</p>
+								</div>
+							</div>
+						</div>
+						<div className='MainScreen-card-set-item'>
+							<div className='MainScreen-card-set-item-content'>
+								<img
+									className='MainScreen-card-set-item-content-image'
+									src={placeholder}
+								/>
+								<div className='MainScreen-card-set-item-content-label-content'>
+									<p className='MainScreen-card-set-item-content-label'>
+										Кружка “Белый Волк”
+									</p>
+									<p className='MainScreen-card-set-item-content-price'>
+										$14.99
+									</p>
+								</div>
+							</div>
+						</div>
+						<div className='MainScreen-card-set-item'>
+							<div className='MainScreen-card-set-item-content'>
+								<img
+									className='MainScreen-card-set-item-content-image'
+									src={placeholder}
+								/>
+								<div className='MainScreen-card-set-item-content-label-content'>
+									<p className='MainScreen-card-set-item-content-label'>
+										Кружка “Белый Волк”
+									</p>
+									<p className='MainScreen-card-set-item-content-price'>
+										$14.99
+									</p>
+								</div>
+							</div>
+						</div>
+						<div className='MainScreen-card-set-item'>
+							<div className='MainScreen-card-set-item-content'>
+								<img
+									className='MainScreen-card-set-item-content-image'
+									src={placeholder}
+								/>
+								<div className='MainScreen-card-set-item-content-label-content'>
+									<p className='MainScreen-card-set-item-content-label'>
+										Кружка “Белый Волк”
+									</p>
+									<p className='MainScreen-card-set-item-content-price'>
+										$14.99
+									</p>
+								</div>
+							</div>
+						</div>
+						<div className='MainScreen-card-set-item'>
+							<div className='MainScreen-card-set-item-content'>
+								<img
+									className='MainScreen-card-set-item-content-image'
+									src={placeholder}
+								/>
+								<div className='MainScreen-card-set-item-content-label-content'>
+									<p className='MainScreen-card-set-item-content-label'>
+										Кружка “Белый Волк”
+									</p>
+									<p className='MainScreen-card-set-item-content-price'>
+										$14.99
+									</p>
+								</div>
+							</div>
+						</div>
+					</Carousel>
 				</div>
 			</div>
 		</div>

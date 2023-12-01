@@ -43,8 +43,8 @@
 	width: 20vw;
 	height: 1vw;
 	padding: 0.8vw;
-	border: 3px solid black;
-	border-radius: 10px;
+	border: 0.2vw solid black;
+	border-radius: 1vw;
 	box-sizing: border-box;
 	caret-color: black;
 }
@@ -111,7 +111,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border-radius: 15px;
+	border-radius: 1vw;
 	background-color: black;
 	width: 93vw;
 	height: 30vw;
@@ -119,7 +119,7 @@
 }
 
 .MainScreen-poster-top-image {
-	width: 95vw;
+	width: 93vw;
 }
 
 .MainScreen-poster-bottom {
@@ -136,7 +136,7 @@
 	width: 45.5vw;
 	height: 30vw;
 	background-color: black;
-	border-radius: 15px;
+	border-radius: 1vw;
 }
 .MainScreen-poster-bottom-1 {
 	margin-right: 0.5vw;
@@ -151,4 +151,68 @@
 
 .MainScreen-poster-bottom-2-image {
 	width: 55vw;
+}
+
+.MainScreen-card-set {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 2vw 0vw 2vw 0vw;
+	margin-bottom: 20vw;
+}
+
+.MainScreen-card-set-label {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size: 2.5vw;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+
+.MainScreen-card-set-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: white;
+	color: black;
+	border-radius: 1vw;
+	box-shadow: 0.5vw 0.7vw 0.25vw 0px rgba(0, 0, 0, 0.25);
+}
+
+.MainScreen-card-set-item-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	width: 80%;
+	height: 85%;
+	padding: 2vw 1vw;
+}
+
+.MainScreen-card-set-item-content-image {
+	width: 10vw;
+	height: auto;
+}
+
+.MainScreen-card-set-item-content-label-content {
+	display: flex;
+	flex-direction: column;
+}
+
+.MainScreen-card-set-item-content-label,
+.MainScreen-card-set-item-content-price {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size: 1.3vw;
+	font-style: normal;
+	text-align: left;
+	font-weight: 700;
+	line-height: normal;
+	margin: 0vw;
+}
+
+.MainScreen-card-set-item-content-price {
+	font-weight: 400;
 }
