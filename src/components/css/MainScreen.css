@@ -159,7 +159,6 @@
 	align-items: center;
 	justify-content: center;
 	margin: 2vw 0vw 2vw 0vw;
-	margin-bottom: 20vw;
 }
 
 .MainScreen-card-set-label {
@@ -215,4 +214,23 @@
 
 .MainScreen-card-set-item-content-price {
 	font-weight: 400;
+}
+
+.MainScreen-offer {
+	flex: 1;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 1vw;
+	background-color: black;
+	width: 93vw;
+	height: 30vw;
+	margin: 1vw 0vw 1vw 0vw;
+}
+
+.MainScreen-offer-div {
+	height: 100%;
+	color: white;
+	width: 50%;
 }

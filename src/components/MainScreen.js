@@ -81,6 +81,11 @@ function MainScreen() {
 				<div className='MainScreen-card-set'>
 					<p className='MainScreen-card-set-label'>Рекомендуем</p>
 					<Carousel>
+						{/* <CardSetItem
+							imageSrc={placeholder}
+							labelText="Кружка 'Белый Волк'"
+							priceText='$14.999'
+						/> */}
 						<div className='MainScreen-card-set-item'>
 							<div className='MainScreen-card-set-item-content'>
 								<img
@@ -178,6 +183,10 @@ function MainScreen() {
 							</div>
 						</div>
 					</Carousel>
+				</div>
+				<div className='MainScreen-offer'>
+					<div className='MainScreen-offer-div'></div>
+					<div className='MainScreen-offer-div'></div>
 				</div>
 			</div>
 		</div>

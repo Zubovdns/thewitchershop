@@ -46,7 +46,7 @@ export const Carousel = ({ children }) => {
 				});
 			})
 		);
-	}, []);
+	}, [children]);
 
 	return (
 		<div className='MainContainer'>
