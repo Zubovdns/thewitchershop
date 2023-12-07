@@ -10,7 +10,10 @@
 	align-items: center;
 	position: absolute;
 	transition: transform 0.5s ease;
+<<<<<<< HEAD
 	z-index: 10000;
+=======
+>>>>>>> about-us
 }
 .sticky {
 	top: -4vw;
