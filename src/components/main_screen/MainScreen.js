@@ -2,6 +2,7 @@ import React from 'react';
 import Carousel from '../carousel/Carousel';
 import './css/MainScreen.css';
 import placeholder from './img/Placeholder_img.png';
+import offerImg from './img/offer_img.jpeg';
 import posterBottom1 from './img/poster_bottom_1_img.jpeg';
 import posterBottom2 from './img/poster_bottom_2_img.jpeg';
 import posterTop from './img/poster_top_img.jpeg';
@@ -147,9 +148,18 @@ function MainScreen() {
 					</Carousel>
 				</div>
 				<div className='MainScreen-offer'>
-					<div className='MainScreen-offer-1'></div>
+					<div className='MainScreen-offer-1'>
+						<div className='MainScreen-offer-1-content'>
+							<p className='MainScreen-offer-1-content-text-1'>
+								НАЧНИ СВОЙ ВЕДЬМАЧИЙ ПУТЬ
+							</p>
+							<p className='MainScreen-offer-1-content-text-2'>
+								Посмотреть товары -{'>'}
+							</p>
+						</div>
+					</div>
 					<div className='MainScreen-offer-2'>
-						<image className='MainScreen-offer-2-image' src={placeholder} />
+						<img className='MainScreen-offer-2-image' src={offerImg} />
 					</div>
 				</div>
 			</div>
