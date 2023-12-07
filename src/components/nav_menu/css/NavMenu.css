@@ -1,0 +1,49 @@
+.NavMenu {
+	top: 0;
+	height: 2vw;
+	width: 100%;
+	padding: 1vw 0vw 1vw 0vw;
+	overflow: hidden;
+	background-color: black;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	position: absolute;
+	transition: transform 0.5s ease;
+}
+.sticky {
+	top: -4vw;
+	position: fixed;
+	width: 100%;
+	box-shadow: 0 1vw 2vw rgba(0, 0, 0, 0.3);
+	transform: translateY(4vw);
+}
+
+.NavMenu-image {
+	width: 9vw;
+}
+
+.NavMenu-text {
+	font-size: 1.5vw;
+	text-decoration: none;
+	color: #b3b4b4;
+}
+
+.NavMenu-input {
+	background-color: #b3b4b4;
+	width: 20vw;
+	height: 1vw;
+	padding: 0.8vw;
+	border: 0.2vw solid black;
+	border-radius: 1vw;
+	box-sizing: border-box;
+	caret-color: black;
+}
+
+.NavMenu-input:focus {
+	outline: none;
+}
+
+.NavMenu-icon {
+	width: 2vw;
+}

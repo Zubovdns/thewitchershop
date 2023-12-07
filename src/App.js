@@ -1,9 +1,11 @@
 import './App.css';
 import AboutUs from './components/about-us/AboutUs'
+import NavMenu from './components/nav_menu/NavMenu'
 
 function App() {
 	return (
 		<div className='App'>
+			<NavMenu />
 			<AboutUs />
 		</div>
 	);
