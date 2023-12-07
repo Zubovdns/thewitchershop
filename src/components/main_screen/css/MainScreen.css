@@ -217,11 +217,8 @@
 }
 
 .MainScreen-offer {
-	flex: 1;
 	overflow: hidden;
 	display: flex;
-	justify-content: center;
-	align-items: center;
 	border-radius: 1vw;
 	background-color: black;
 	width: 93vw;
@@ -229,8 +226,23 @@
 	margin: 1vw 0vw 1vw 0vw;
 }
 
-.MainScreen-offer-div {
+.MainScreen-offer-1,
+.MainScreen-offer-2 {
 	height: 100%;
-	color: white;
+	background-color: wheat;
 	width: 50%;
+	color: black;
+}
+
+.MainScreen-offer-2 {
+	flex: 1;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+}
+
+.MainScreen-offer-2-image {
+	width: 49vw;
 }

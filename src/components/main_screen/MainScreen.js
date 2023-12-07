@@ -1,53 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import Carousel from './carousel/Carousel';
+import React from 'react';
+import Carousel from '../carousel/Carousel';
 import './css/MainScreen.css';
 import placeholder from './img/Placeholder_img.png';
-import basketImg from './img/basket_img.png';
 import posterBottom1 from './img/poster_bottom_1_img.jpeg';
 import posterBottom2 from './img/poster_bottom_2_img.jpeg';
 import posterTop from './img/poster_top_img.jpeg';
 import witcherEmblemImg from './img/witcher_emblem_img.png';
 
 function MainScreen() {
-	const [isSticky, setIsSticky] = useState(false);
-	const [imageUrl, setImageUrl] = useState(null);
-
-	useEffect(() => {
-		const handleScroll = () => {
-			if (window.scrollY > 600) {
-				setIsSticky(true);
-				setImageUrl(witcherEmblemImg);
-			} else {
-				setIsSticky(false);
-				setImageUrl(null);
-			}
-		};
-
-		window.addEventListener('scroll', handleScroll);
-
-		return () => {
-			window.removeEventListener('scroll', handleScroll);
-		};
-	}, []);
-
 	return (
 		<div className='MainScreen'>
-			<div className={`MainScreen-header ${isSticky ? 'sticky' : ''}`}>
-				{imageUrl && <img className='MainScreen-header-image' src={imageUrl} />}
-				<a className='MainScreen-header-text' href=''>
-					Главная
-				</a>
-				<a className='MainScreen-header-text' href=''>
-					Категории
-				</a>
-				<a className='MainScreen-header-text' href=''>
-					О нас
-				</a>
-				<input type='text' className='MainScreen-header-input' />
-				<a href=''>
-					<img className='MainScreen-header-icon' src={basketImg} />
-				</a>
-			</div>
 			<div className='MainScreen-body'>
 				<img className='MainScreen-body-image' src={witcherEmblemImg} />
 				<div className='MainScreen-body-quotation'>
@@ -185,8 +147,10 @@ function MainScreen() {
 					</Carousel>
 				</div>
 				<div className='MainScreen-offer'>
-					<div className='MainScreen-offer-div'></div>
-					<div className='MainScreen-offer-div'></div>
+					<div className='MainScreen-offer-1'></div>
+					<div className='MainScreen-offer-2'>
+						<image className='MainScreen-offer-2-image' src={placeholder} />
+					</div>
 				</div>
 			</div>
 		</div>
