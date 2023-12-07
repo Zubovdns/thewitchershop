@@ -1,0 +1,14 @@
+.Footer {
+	background-color: black;
+	width: 100%;
+	height: auto;
+	display: flex;
+}
+.Footer-content {
+	margin: 1vw 2vw;
+}
+
+.Footer-on-top-href {
+	text-decoration: none;
+	color: white;
+}

@@ -1,10 +1,10 @@
 .MainScreen {
 	width: 100%;
 	height: 0;
-	padding-bottom: 56.25%;
 	background-color: black;
 	display: flex;
 	flex-direction: column;
+	height: auto;
 }
 
 .MainScreen-body {
@@ -182,9 +182,6 @@
 	background-color: black;
 	width: 50%;
 	color: white;
-}
-
-.MainScreen-offer-1 {
 }
 
 .MainScreen-offer-1-content {
