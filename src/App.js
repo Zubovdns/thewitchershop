@@ -1,9 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import AboutUs from './components/about-us/AboutUs';
+import Catalog from './components/catalog/Catalog';
 import Footer from './components/footer/Footer';
+import MainScreen from './components/main_screen/MainScreen';
 import NavMenu from './components/nav_menu/NavMenu';
-import Catalog from './components/catalog/Catalog'
 
 function App() {
 	return (
