@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './css/NavMenu.css';
 import basketImg from './img/basket_img.png';
 import witcherEmblemImg from './img/witcher_emblem_img.png';
 
-function NavMenu() {
+const NavMenu = () => {
 	const [isSticky, setIsSticky] = useState(false);
 	const [imageUrl, setImageUrl] = useState(null);
 
@@ -28,21 +29,21 @@ function NavMenu() {
 	return (
 		<div className={`NavMenu ${isSticky ? 'sticky' : ''}`}>
 			{imageUrl && <img className='NavMenu-image' src={imageUrl} />}
-			<a className='NavMenu-text' href=''>
+			<Link className='NavMenu-text' to='/'>
 				Главная
-			</a>
-			<a className='NavMenu-text' href=''>
+			</Link>
+			<Link className='NavMenu-text' to='/category'>
 				Категории
-			</a>
-			<a className='NavMenu-text' href=''>
+			</Link>
+			<Link className='NavMenu-text' to='/about'>
 				О нас
-			</a>
+			</Link>
 			<input type='text' className='NavMenu-input' />
-			<a href=''>
+			<Link to='/basket'>
 				<img className='NavMenu-icon' src={basketImg} />
-			</a>
+			</Link>
 		</div>
 	);
-}
+};
 
 export default NavMenu;
