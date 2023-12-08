@@ -1,4 +1,5 @@
 import React from 'react';
+import CardSetItem from '../card_set_item/CardSetItem';
 import './css/ProductPage.css';
 import placeholder from './img/Placeholder_img.png';
 import instagramIcon from './img/instagram_img.png';
@@ -76,6 +77,37 @@ function ProductPage() {
 								Уже поделилось: 1513
 							</a>
 						</div>
+					</div>
+				</div>
+
+				<div className='ProductPage-see-also'>
+					<p className='ProductPage-see-also-label'>Смотрите также</p>
+					<div className='ProductPage-see-also-body'>
+						<CardSetItem
+							imageSrc={instagramIcon}
+							labelText='Кружка "Белый волк"'
+							priceText='$14.99'
+						/>
+						<CardSetItem
+							imageSrc={instagramIcon}
+							labelText='Кружка "Белый волк"'
+							priceText='$14.99'
+						/>
+						<CardSetItem
+							imageSrc={instagramIcon}
+							labelText='Кружка "Белый волк"'
+							priceText='$14.99'
+						/>
+						<CardSetItem
+							imageSrc={instagramIcon}
+							labelText='Кружка "Белый волк"'
+							priceText='$14.99'
+						/>
+						<CardSetItem
+							imageSrc={instagramIcon}
+							labelText='Кружка "Белый волк"'
+							priceText='$14.99'
+						/>
 					</div>
 				</div>
 			</div>

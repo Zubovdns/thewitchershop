@@ -3,7 +3,6 @@ import './App.css';
 import AboutUs from './components/about-us/AboutUs';
 import Footer from './components/footer/Footer';
 import NavMenu from './components/nav_menu/NavMenu';
-import ProductPage from './components/product_page/ProductPage';
 
 function App() {
 	return (

@@ -171,3 +171,22 @@
 	font-size: 1.8vw;
 	margin-top: 2vw;
 }
+
+.ProductPage-see-also {
+	padding-bottom: 4vw;
+}
+
+.ProductPage-see-also-label {
+	width: 100%;
+	text-align: left;
+	margin-bottom: 1vw;
+	font-size: 2.5vw;
+	font-weight: 700;
+	padding-bottom: 3vw;
+}
+
+.ProductPage-see-also-body {
+	display: flex;
+	align-items: center;
+	gap: 2vw;
+}
