@@ -1,0 +1,30 @@
+.MainContainer {
+	width: 81vw;
+	height: 20vw;
+	display: flex;
+	align-items: center;
+}
+
+.Window {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+.ItemsContainer {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	transition: translate;
+	transition-property: transform;
+	transition-duration: 300ms;
+	transition-timing-function: ease-in-out;
+}
+
+.MainContainer-arrow {
+	cursor: pointer;
+}
+
+.MainContainer-arrow-image {
+	width: 2.5vw;
+}

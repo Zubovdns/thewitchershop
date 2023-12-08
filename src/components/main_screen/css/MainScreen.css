@@ -1,0 +1,221 @@
+.MainScreen {
+	width: 100%;
+	height: 0;
+	background-color: black;
+	display: flex;
+	flex-direction: column;
+	height: auto;
+}
+
+.MainScreen-body {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 2vw;
+}
+
+.MainScreen-body-image {
+	margin-top: 1vw;
+	margin-left: 10vw;
+	width: 35vw;
+}
+
+.MainScreen-body-quotation {
+	display: flex;
+	flex-direction: column;
+	margin: 10vw;
+}
+
+.MainScreen-body-quotation-text-1,
+.MainScreen-body-quotation-text-2 {
+	color: #b3b4b4;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size: 2.5vw;
+	font-style: italic;
+	font-weight: 150;
+	line-height: normal;
+}
+
+.MainScreen-body-quotation-text-1 {
+	text-align: center;
+}
+
+.MainScreen-body-quotation-text-2 {
+	text-align: right;
+}
+
+.MainScreen-main-page {
+	background-color: #eeeeee;
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-top: 3%;
+}
+
+.MainScreen-poster-top {
+	flex: 1;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 2vw;
+	background-color: black;
+	width: 93vw;
+	height: 30vw;
+	margin: 0vw 0vw 1vw 0vw;
+}
+
+.MainScreen-poster-top-image {
+	width: 93vw;
+}
+
+.MainScreen-poster-bottom {
+	display: flex;
+}
+
+.MainScreen-poster-bottom-1,
+.MainScreen-poster-bottom-2 {
+	flex: 1;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 45.5vw;
+	height: 30vw;
+	background-color: black;
+	border-radius: 2vw;
+}
+.MainScreen-poster-bottom-1 {
+	margin-right: 0.5vw;
+}
+.MainScreen-poster-bottom-2 {
+	margin-left: 0.5vw;
+}
+
+.MainScreen-poster-bottom-1-image {
+	width: 55vw;
+}
+
+.MainScreen-poster-bottom-2-image {
+	width: 55vw;
+}
+
+.MainScreen-card-set {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 2vw 0vw 2vw 0vw;
+}
+
+.MainScreen-card-set-label {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size: 2.5vw;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+
+.MainScreen-card-set-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: white;
+	color: black;
+	border-radius: 1vw;
+	box-shadow: 0.5vw 0.7vw 0.25vw 0px rgba(0, 0, 0, 0.25);
+}
+
+.MainScreen-card-set-item-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	width: 80%;
+	height: 85%;
+	padding: 2vw 1vw;
+}
+
+.MainScreen-card-set-item-content-image {
+	width: 10vw;
+	height: auto;
+}
+
+.MainScreen-card-set-item-content-label-content {
+	display: flex;
+	flex-direction: column;
+}
+
+.MainScreen-card-set-item-content-label,
+.MainScreen-card-set-item-content-price {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size: 1.3vw;
+	font-style: normal;
+	text-align: left;
+	font-weight: 700;
+	line-height: normal;
+	margin: 0vw;
+}
+
+.MainScreen-card-set-item-content-price {
+	font-weight: 400;
+}
+
+.MainScreen-offer {
+	overflow: hidden;
+	display: flex;
+	border-radius: 2vw;
+	background-color: black;
+	width: 93vw;
+	height: 37vw;
+	margin: 1vw 0vw 1vw 0vw;
+}
+
+.MainScreen-offer-1,
+.MainScreen-offer-2 {
+	height: 100%;
+	background-color: black;
+	width: 50%;
+	color: white;
+}
+
+.MainScreen-offer-1-content {
+	margin: 5vw 15vw 5vw 5vw;
+}
+
+.MainScreen-offer-1-content-text-1,
+.MainScreen-offer-1-content-text-2 {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size: 2.5vw;
+	font-style: normal;
+	text-align: left;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.MainScreen-offer-1-content-text-1 {
+	margin-bottom: 7vw;
+}
+
+.MainScreen-offer-1-content-text-2 {
+	font-size: 1.7vw;
+}
+
+.MainScreen-offer-2 {
+	flex: 1;
+	background-color: floralwhite;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.MainScreen-offer-2-image {
+	width: 65vw;
+}
