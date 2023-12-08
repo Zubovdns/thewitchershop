@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./css/Catalog.css";
+import CardSetItem from "../card_set_item/CardSetItem";
+import image from "../main_screen/img/Placeholder_img.png"
 
 function NavMenu() {
   return (
@@ -9,9 +11,19 @@ function NavMenu() {
         <hr className="Catalog-Main-Poster-Line"></hr>
         <p className="Catalog-Main-Poster-Bottom">90% OFF</p>
       </div>
-      <div className='Catalog-Main-Header'>Категории</div>
+      <div className="Catalog-Main-Header">Каталог</div>
       <div className="Catalog-Main-ItemsAndFilters">
-        <div className="Catalog-Main-ItemsAndFilters-Items">123</div>
+        <div className="Catalog-Main-ItemsAndFilters-Items">
+        <CardSetItem imageSrc={image} labelText='Кружка "Белый волк"' priceText='$14.99'/>
+        <CardSetItem imageSrc={image} labelText='Кружка "Белый волк"' priceText='$14.99'/>
+        <CardSetItem imageSrc={image} labelText='Кружка "Белый волк"' priceText='$14.99'/>
+        <CardSetItem imageSrc={image} labelText='Кружка "Белый волк"' priceText='$14.99'/>
+        <CardSetItem imageSrc={image} labelText='Кружка "Белый волк"' priceText='$14.99'/>
+        <CardSetItem imageSrc={image} labelText='Кружка "Белый волк"' priceText='$14.99'/>
+        <CardSetItem imageSrc={image} labelText='Кружка "Белый волк"' priceText='$14.99'/>
+        <CardSetItem imageSrc={image} labelText='Кружка "Белый волк"' priceText='$14.99'/>
+        <CardSetItem imageSrc={image} labelText='Кружка "Белый волк"' priceText='$14.99'/>
+        </div>
         <div className="Catalog-Main-ItemsAndFilters-Filters">
           <div className="Catalog-Main-ItemsAndFilters-Filters-Header">
             Фильтры

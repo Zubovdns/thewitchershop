@@ -32,8 +32,8 @@ const NavMenu = () => {
 			<Link className='NavMenu-text' to='/'>
 				Главная
 			</Link>
-			<Link className='NavMenu-text' to='/category'>
-				Категории
+			<Link className='NavMenu-text' to='/catalog'>
+				Каталог
 			</Link>
 			<Link className='NavMenu-text' to='/about'>
 				О нас
