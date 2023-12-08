@@ -4,13 +4,26 @@ import basketImg from "./img/basket_img.png";
 import witcherEmblemImg from "./img/witcher_emblem_img.png";
 
 function NavMenu() {
-  const [isSticky, setIsSticky] = useState(false);
-  const [imageUrl, setImageUrl] = useState(null);
+	const [isSticky, setIsSticky] = useState(false);
+	const [imageUrl, setImageUrl] = useState(null);
 
-  useEffect(() => {
-    setIsSticky(true);
-    setImageUrl(witcherEmblemImg);
-  }, []);
+	useEffect(() => {
+		const handleScroll = () => {
+			if (window.scrollY > 600) {
+				setIsSticky(true);
+				setImageUrl(witcherEmblemImg);
+			} else {
+				setIsSticky(false);
+				setImageUrl(null);
+			}
+		};
+
+		window.addEventListener('scroll', handleScroll);
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, []);
 
   return (
     <div className={`NavMenu ${isSticky ? "sticky" : ""}`}>
