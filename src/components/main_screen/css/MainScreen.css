@@ -1,6 +1,5 @@
 .MainScreen {
 	width: 100%;
-	height: 0;
 	background-color: black;
 	display: flex;
 	flex-direction: column;
