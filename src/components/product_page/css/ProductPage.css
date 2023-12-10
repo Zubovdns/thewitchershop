@@ -158,6 +158,7 @@
 
 .ProductPage-product-share-icon {
 	height: 3.5vw;
+	border-radius: 50%;
 }
 
 .ProductPage-product-share-shared-amount {
