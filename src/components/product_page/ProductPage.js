@@ -15,7 +15,7 @@ function ProductPage() {
 				</div>
 				<div className='ProductPage-path'>
 					<a className='ProductPage-path-text'>
-						Главная {'>'} Категории {'>'} Кружки
+						Главная {'>'} Каталог {'>'} Кружки
 					</a>
 				</div>
 				<div className='ProductPage-product-card'>
