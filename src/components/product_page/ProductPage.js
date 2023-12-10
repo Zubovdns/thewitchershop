@@ -55,7 +55,7 @@ function ProductPage() {
 								</a>
 							</div>
 
-							<input className='ProductPage-product-buy-amount'></input>
+							<input className='ProductPage-product-buy-amount' type='number' min='1' max='10'></input>
 							<button className='ProductPage-product-buy-button'>
 								Добавить в корзину
 							</button>

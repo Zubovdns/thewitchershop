@@ -3,6 +3,7 @@ import "./css/AboutUs.css";
 import ImageCall from "./img/ImageCall.png";
 import ImageTG from "./img/ImageTG.png";
 import ImageVK from "./img/ImageVK.png";
+import ProductPage from "../product_page/ProductPage.js"
 
 function AboutUs() {
   return (
@@ -53,6 +54,7 @@ function AboutUs() {
           </div>
         </div>
       </div>
+      <ProductPage />
     </div>
   );
 }
