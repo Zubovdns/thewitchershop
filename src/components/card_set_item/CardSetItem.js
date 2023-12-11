@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import React from 'react';
 import './css/CardSetItem.css';
 
 const CardSetItem = ({ imageSrc, labelText, priceText }) => {
 	return (
+		<Link className='Link-to-catalog' to='/item'>
 		<div className='CardSetItem'>
 			<div className='CardSetItem-content'>
 				<img className='CardSetItem-content-image' src={imageSrc} />
@@ -13,6 +15,7 @@ const CardSetItem = ({ imageSrc, labelText, priceText }) => {
 				</div>
 			</div>
 		</div>
+		</Link>
 	);
 };
 

@@ -73,6 +73,7 @@
 
 .MainScreen-poster-bottom {
 	display: flex;
+	width: 100%;
 }
 
 .MainScreen-poster-bottom-1,
@@ -217,4 +218,20 @@
 
 .MainScreen-offer-2-image {
 	width: 65vw;
+}
+
+.Catalog-Main-Poster-1{
+	border-radius: 2vw;
+	display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 5%;
+  background-color: black;
+}
+
+.Link-to-catalog{
+	color: white;
+	text-decoration: none;
 }

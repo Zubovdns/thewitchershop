@@ -26,6 +26,7 @@
 .CardSetItem-content-label-content {
 	display: flex;
 	flex-direction: column;
+	text-decoration: none;
 }
 
 .CardSetItem-content-label,

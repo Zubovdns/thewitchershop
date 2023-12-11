@@ -6,6 +6,7 @@ import Footer from './components/footer/Footer';
 import MainScreen from './components/main_screen/MainScreen';
 import NavMenu from './components/nav_menu/NavMenu';
 import Cart from './components/cart/Cart'
+import ProductPage from './components/product_page/ProductPage';
 
 function App() {
 	return (
@@ -17,6 +18,7 @@ function App() {
 					<Route path='/catalog' element={<Catalog />} />
 					<Route path='/about' element={<AboutUs />} />
 					<Route path='/basket' element={<Cart />} />
+					<Route path='/item' element={<ProductPage />}/>
 				</Route>
 			</Routes>
 			<Footer />

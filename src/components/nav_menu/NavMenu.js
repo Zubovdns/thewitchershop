@@ -10,7 +10,7 @@ const NavMenu = () => {
 
 	useEffect(() => {
 		const handleScroll = () => {
-			if (window.scrollY > 600) {
+			if (true) {
 				setIsSticky(true);
 				setImageUrl(witcherEmblemImg);
 			} else {
@@ -29,17 +29,29 @@ const NavMenu = () => {
 	return (
 		<div className={`NavMenu ${isSticky ? 'sticky' : ''}`}>
 			{imageUrl && <img className='NavMenu-image' src={imageUrl} />}
-			<Link className='NavMenu-text' to='/'>
+			<Link className='NavMenu-text' to='/' onClick={() =>{
+				window.scroll({top:0, left:0, behavior:'smooth',});
+			}
+			}>
 				Главная
 			</Link>
-			<Link className='NavMenu-text' to='/catalog'>
+			<Link className='NavMenu-text' to='/catalog' onClick={() =>{
+				window.scroll({top:0, left:0, behavior:'smooth',});
+			}
+			}>
 				Каталог
 			</Link>
-			<Link className='NavMenu-text' to='/about'>
+			<Link className='NavMenu-text' to='/about' onClick={() =>{
+				window.scroll({top:0, left:0, behavior:'smooth',});
+			}
+			}>
 				О нас
 			</Link>
 			<input type='text' className='NavMenu-input' />
-			<Link to='/basket'>
+			<Link to='/basket' onClick={() =>{
+				window.scroll({top:0, left:0, behavior:'smooth'});
+			}
+			}>
 				<img className='NavMenu-icon' src={basketImg} />
 			</Link>
 		</div>

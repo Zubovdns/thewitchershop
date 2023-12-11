@@ -5,10 +5,13 @@ import placeholder from './img/Placeholder_img.png';
 import instagramIcon from './img/instagram_img.png';
 import telegramIcon from './img/telegram_img.png';
 import vkIcon from './img/vk_img.png';
+import NavMenu from '../catalog/Catalog';
+import Footer from '../footer/Footer';
 
 function ProductPage() {
 	return (
 		<div className='ProductPage'>
+			<NavMenu/>
 			<div className='ProductPage-body'>
 				<div className='ProductPage-label'>
 					<a className='ProductPage-label-text'>Кружка “Белый Волк”</a>
@@ -45,6 +48,7 @@ function ProductPage() {
 						</div>
 					</div>
 					<div className='ProductPage-product-block'>
+						<div className='ProductPage-product-wrapper'>
 						<div className='ProductPage-product-buy'>
 							<div className='ProductPage-product-buy-content'>
 								<a className='ProductPage-product-buy-cost'>$14.99</a>
@@ -78,6 +82,7 @@ function ProductPage() {
 							</a>
 						</div>
 					</div>
+						</div>
 				</div>
 
 				<div className='ProductPage-see-also'>
@@ -111,6 +116,7 @@ function ProductPage() {
 					</div>
 				</div>
 			</div>
+			<Footer/>
 		</div>
 	);
 }

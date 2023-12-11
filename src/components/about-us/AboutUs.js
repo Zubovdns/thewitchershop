@@ -54,7 +54,6 @@ function AboutUs() {
           </div>
         </div>
       </div>
-      <ProductPage />
     </div>
   );
 }

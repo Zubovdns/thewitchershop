@@ -190,6 +190,8 @@ select {
   cursor: pointer;
 }
 
+
+
 .custom-select::before,
 .custom-select::after {
   --size: 0.3vw;

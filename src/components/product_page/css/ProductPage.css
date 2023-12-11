@@ -68,8 +68,11 @@
 	align-items: center;
 }
 
+
+
 .ProductPage-product-buy {
 	align-items: baseline;
+	
 }
 
 .ProductPage-product-div-image {
@@ -136,6 +139,7 @@
 	transition: 0.1s;
 }
 
+
 .ProductPage-product-share {
 	display: flex;
 	flex-direction: column;
@@ -200,4 +204,11 @@
 	display: flex;
 	align-items: center;
 	gap: 2vw;
+}
+
+
+.ProductPage-product-wrapper{
+	position: sticky;
+	top: 4.5vw;
+	padding-bottom: 0.05vw;
 }
