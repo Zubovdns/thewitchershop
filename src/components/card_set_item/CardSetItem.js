@@ -5,7 +5,10 @@ import './css/CardSetItem.css';
 
 const CardSetItem = ({ imageSrc, labelText, priceText }) => {
 	return (
-		<Link className='Link-to-catalog' to='/item'>
+		<Link className='Link-to-catalog' to='/item' onClick={() =>{
+			window.scroll({top:0, left:0, behavior:'smooth'});
+		}
+		}>
 		<div className='CardSetItem'>
 			<div className='CardSetItem-content'>
 				<img className='CardSetItem-content-image' src={imageSrc} />

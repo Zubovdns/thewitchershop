@@ -11,7 +11,6 @@ import Footer from '../footer/Footer';
 function ProductPage() {
 	return (
 		<div className='ProductPage'>
-			<NavMenu/>
 			<div className='ProductPage-body'>
 				<div className='ProductPage-label'>
 					<a className='ProductPage-label-text'>Кружка “Белый Волк”</a>
@@ -116,7 +115,6 @@ function ProductPage() {
 					</div>
 				</div>
 			</div>
-			<Footer/>
 		</div>
 	);
 }
