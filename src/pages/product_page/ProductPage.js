@@ -1,12 +1,10 @@
 import React from 'react';
-import CardSetItem from '../card_set_item/CardSetItem';
+import CardSetItem from '../../components/card_set_item/CardSetItem';
 import './css/ProductPage.css';
 import placeholder from './img/Placeholder_img.png';
 import instagramIcon from './img/instagram_img.png';
 import telegramIcon from './img/telegram_img.png';
 import vkIcon from './img/vk_img.png';
-import NavMenu from '../catalog/Catalog';
-import Footer from '../footer/Footer';
 
 function ProductPage() {
 	return (
@@ -48,40 +46,48 @@ function ProductPage() {
 					</div>
 					<div className='ProductPage-product-block'>
 						<div className='ProductPage-product-wrapper'>
-						<div className='ProductPage-product-buy'>
-							<div className='ProductPage-product-buy-content'>
-								<a className='ProductPage-product-buy-cost'>$14.99</a>
-								<a className='ProductPage-product-buy-width'>Ширина: 30см</a>
-								<a className='ProductPage-product-buy-height'>Высота: 25см</a>
-								<a className='ProductPage-product-buy-availability'>
-									Наличие: отсутствует
+							<div className='ProductPage-product-buy'>
+								<div className='ProductPage-product-buy-content'>
+									<a className='ProductPage-product-buy-cost'>$14.99</a>
+									<a className='ProductPage-product-buy-width'>Ширина: 30см</a>
+									<a className='ProductPage-product-buy-height'>Высота: 25см</a>
+									<a className='ProductPage-product-buy-availability'>
+										Наличие: отсутствует
+									</a>
+								</div>
+
+								<input
+									className='ProductPage-product-buy-amount'
+									type='number'
+									min='1'
+									max='10'
+								></input>
+								<button className='ProductPage-product-buy-button'>
+									Добавить в корзину
+								</button>
+							</div>
+							<div className='ProductPage-product-share'>
+								<a className='ProductPage-product-share-label'>Поделиться</a>
+								<div className='ProductPage-product-share-links'>
+									<img
+										className='ProductPage-product-share-icon'
+										src={vkIcon}
+									/>
+									<img
+										className='ProductPage-product-share-icon'
+										src={telegramIcon}
+									/>
+									<img
+										className='ProductPage-product-share-icon'
+										src={instagramIcon}
+									/>
+								</div>
+								<a className='ProductPage-product-share-shared-amount'>
+									Уже поделилось: 1513
 								</a>
 							</div>
-
-							<input className='ProductPage-product-buy-amount' type='number' min='1' max='10'></input>
-							<button className='ProductPage-product-buy-button'>
-								Добавить в корзину
-							</button>
-						</div>
-						<div className='ProductPage-product-share'>
-							<a className='ProductPage-product-share-label'>Поделиться</a>
-							<div className='ProductPage-product-share-links'>
-								<img className='ProductPage-product-share-icon' src={vkIcon} />
-								<img
-									className='ProductPage-product-share-icon'
-									src={telegramIcon}
-								/>
-								<img
-									className='ProductPage-product-share-icon'
-									src={instagramIcon}
-								/>
-							</div>
-							<a className='ProductPage-product-share-shared-amount'>
-								Уже поделилось: 1513
-							</a>
 						</div>
 					</div>
-						</div>
 				</div>
 
 				<div className='ProductPage-see-also'>

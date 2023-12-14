@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Carousel from '../carousel/Carousel';
+import Carousel from '../../components/carousel/Carousel';
 import './css/MainScreen.css';
 import placeholder from './img/Placeholder_img.png';
 import offerImg from './img/offer_img.jpeg';
@@ -26,11 +26,11 @@ function MainScreen() {
 						<img className='MainScreen-poster-top-image' src={posterTop} />
 					</div>
 					<div className='MainScreen-poster-bottom'>
-						<div className="Catalog-Main-Poster-1">
-        					<p className="Catalog-Main-Poster-Top">Black Friday</p>
-        					<hr className="Catalog-Main-Poster-Line"></hr>
-        					<p className="Catalog-Main-Poster-Bottom">90% OFF</p>
-     					 </div>
+						<div className='Catalog-Main-Poster-1'>
+							<p className='Catalog-Main-Poster-Top'>Black Friday</p>
+							<hr className='Catalog-Main-Poster-Line'></hr>
+							<p className='Catalog-Main-Poster-Bottom'>90% OFF</p>
+						</div>
 					</div>
 				</div>
 				<div className='MainScreen-card-set'>
@@ -145,13 +145,16 @@ function MainScreen() {
 							<p className='MainScreen-offer-1-content-text-1'>
 								НАЧНИ СВОЙ ВЕДЬМАЧИЙ ПУТЬ
 							</p>
-							<Link className='Link-to-catalog' to='/catalog' onClick={() =>{
-				window.scroll({top:0, left:0, behavior:'smooth'});
-			}
-			}>
-							<p className='MainScreen-offer-1-content-text-2'>
-								Посмотреть товары	{'→'}
-							</p>
+							<Link
+								className='Link-to-catalog'
+								to='/catalog'
+								onClick={() => {
+									window.scroll({ top: 0, left: 0, behavior: 'smooth' });
+								}}
+							>
+								<p className='MainScreen-offer-1-content-text-2'>
+									Посмотреть товары {'→'}
+								</p>
 							</Link>
 						</div>
 					</div>
