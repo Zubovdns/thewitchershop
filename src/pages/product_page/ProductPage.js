@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CardSetItem from '../../components/card_set_item/CardSetItem';
 import './css/ProductPage.css';
 import placeholder from './img/Placeholder_img.png';
@@ -6,8 +6,15 @@ import instagramIcon from './img/instagram_img.png';
 import telegramIcon from './img/telegram_img.png';
 import vkIcon from './img/vk_img.png';
 
+
 function ProductPage() {
-	return (
+	const [isClicked,setIsClicked] = useState(false);
+
+	function handeClick(){
+		setIsClicked(state => true);
+	}
+
+ 	return (
 		<div className='ProductPage'>
 			<div className='ProductPage-body'>
 				<div className='ProductPage-label'>
@@ -62,8 +69,8 @@ function ProductPage() {
 									min='1'
 									max='10'
 								></input>
-								<button className='ProductPage-product-buy-button'>
-									Добавить в корзину
+								<button className={`ProductPage-product-buy-button ${isClicked ?  "ProductPage-product-buy-button-clicked" : ""}`}  onClick={handeClick}>
+									{isClicked ? "В корзине" : "Добавить в корзину"}
 								</button>
 							</div>
 							<div className='ProductPage-product-share'>

@@ -134,6 +134,38 @@
 	transition: 0.2s;
 }
 
+.ProductPage-product-buy-button {
+	margin-top: 1vw;
+	height: 4vw;
+	background-color: black;
+	border: 0;
+	border-radius: 0.7vw;
+	color: white;
+	width: 16vw;
+	font-size: 1.2vw;
+	font-weight: 700;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+.ProductPage-product-buy-button-clicked {
+	margin-top: 1vw;
+	height: 4vw;
+	background-color: lightgray;
+	border: 0;
+	border-radius: 0.7vw;
+	color: black;
+	width: 16vw;
+	font-size: 1.2vw;
+	font-weight: 700;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.ProductPage-product-buy-button-clicked:disabled {
+	background-color: lightgray;
+}
+
 .ProductPage-product-buy-button:active {
 	background-color: #b3b4b4;
 	transition: 0.1s;
