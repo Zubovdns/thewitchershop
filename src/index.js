@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import './index.css';
+import ProductStore from './store/ProductStore';
 import UserStore from './store/UserStore';
 
 export const Context = createContext(null);
@@ -12,6 +13,7 @@ root.render(
 	<Context.Provider
 		value={{
 			user: new UserStore(),
+			product: new ProductStore(),
 		}}
 	>
 		<BrowserRouter>

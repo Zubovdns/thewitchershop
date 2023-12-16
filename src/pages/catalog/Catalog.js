@@ -1,9 +1,29 @@
-import React, { useEffect, useState } from 'react';
+import { observer } from 'mobx-react-lite';
+import React, { useContext, useEffect } from 'react';
+import ProductList from '../../components/product_list/ProductList';
+import Types from '../../components/types/Types';
+import { fetchCategories, fetchProducts } from '../../http/productAPI';
+import { Context } from '../../index';
 import './css/Catalog.css';
-import CardSetItem from '../../components/card_set_item/CardSetItem';
-import image from '../main_screen/img/Placeholder_img.png';
 
-function NavMenu() {
+const Catalog = observer(() => {
+	const { product } = useContext(Context);
+
+	useEffect(() => {
+		fetchCategories().then((data) => product.setTypes(data));
+		fetchProducts(null, 100, 1).then((data) => {
+			product.setProducts(data.rows);
+			product.setTotalCount(data.count);
+		});
+	}, []);
+
+	useEffect(() => {
+		fetchProducts(product.selectedType.id, 100, 1).then((data) => {
+			product.setProducts(data.rows);
+			product.setTotalCount(data.count);
+		});
+	}, [product.selectedType]);
+
 	return (
 		<div className='Catalog-Main'>
 			<div className='Catalog-Main-Poster'>
@@ -13,53 +33,7 @@ function NavMenu() {
 			</div>
 			<div className='Catalog-Main-Header'>Каталог</div>
 			<div className='Catalog-Main-ItemsAndFilters'>
-				<div className='Catalog-Main-ItemsAndFilters-Items'>
-					<CardSetItem
-						imageSrc={image}
-						labelText='Кружка "Белый волк"'
-						priceText='$14.99'
-					/>
-					<CardSetItem
-						imageSrc={image}
-						labelText='Кружка "Белый волк"'
-						priceText='$14.99'
-					/>
-					<CardSetItem
-						imageSrc={image}
-						labelText='Кружка "Белый волк"'
-						priceText='$14.99'
-					/>
-					<CardSetItem
-						imageSrc={image}
-						labelText='Кружка "Белый волк"'
-						priceText='$14.99'
-					/>
-					<CardSetItem
-						imageSrc={image}
-						labelText='Кружка "Белый волк"'
-						priceText='$14.99'
-					/>
-					<CardSetItem
-						imageSrc={image}
-						labelText='Кружка "Белый волк"'
-						priceText='$14.99'
-					/>
-					<CardSetItem
-						imageSrc={image}
-						labelText='Кружка "Белый волк"'
-						priceText='$14.99'
-					/>
-					<CardSetItem
-						imageSrc={image}
-						labelText='Кружка "Белый волк"'
-						priceText='$14.99'
-					/>
-					<CardSetItem
-						imageSrc={image}
-						labelText='Кружка "Белый волк"'
-						priceText='$14.99'
-					/>
-				</div>
+				<ProductList />
 				<div className='Catalog-Main-ItemsAndFilters-Filters'>
 					<div className='Catalog-Main-ItemsAndFilters-Filters-Header'>
 						Фильтры
@@ -72,19 +46,12 @@ function NavMenu() {
 						</label>
 					</div>
 					<div className='Catalog-Main-ItemsAndFilters-Filters-Category'>
-						<div className='custom-select'>
-							<select>
-								<option value=''>Выбрать категорию</option>
-								<option value=''>Кружки</option>
-								<option value=''>Фигурки</option>
-								<option value=''>Брелки</option>
-							</select>
-						</div>
+						<Types />
 					</div>
 				</div>
 			</div>
 		</div>
 	);
-}
+});
 
-export default NavMenu;
+export default Catalog;

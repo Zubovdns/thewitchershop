@@ -14,10 +14,7 @@ import {
 	REGISTRATION_ROUTE,
 } from './utils/consts';
 
-export const authRoutes = [
-	//{ path: ADMIN_ROUTE, Component: <Admin/> },
-	{ path: BASKET_ROUTE, Component: <Basket /> },
-];
+export const authRoutes = [{ path: BASKET_ROUTE, Component: <Basket /> }];
 
 export const publicRoutes = [
 	{ path: MAIN_ROUTE, Component: <MainScreen /> },

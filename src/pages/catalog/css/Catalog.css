@@ -1,216 +1,214 @@
 .Catalog-Main {
-  margin-top: 3vw;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-  padding-top: 4vw;
-  flex-direction: column;
-  background-color: #eeeeee;
-  padding-bottom: 45vw;
+	margin-top: 3vw;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	padding-top: 4vw;
+	flex-direction: column;
+	background-color: #eeeeee;
+	padding-bottom: 45vw;
 }
 
 .Catalog-Main-Poster {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
-  height: 5%;
-  background-color: black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+	height: 5%;
+	background-color: black;
 }
 
 .Catalog-Main-Poster-Top {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 5vw;
-  font-style: normal;
-  font-weight: 700;
-  color: white;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size: 5vw;
+	font-style: normal;
+	font-weight: 700;
+	color: white;
 }
 
 .Catalog-Main-Poster-Line {
-  width: 75%;
+	width: 75%;
 }
 
 .Catalog-Main-Poster-Bottom {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 5vw;
-  font-style: normal;
-  font-weight: 700;
-  color: white;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size: 5vw;
+	font-style: normal;
+	font-weight: 700;
+	color: white;
 }
 
 .Catalog-Main-ItemsAndFilters {
-  width: 95%;
-  margin-top: 3vw;
-  display: flex;
-  gap: 2vw;
+	width: 95%;
+	margin-top: 3vw;
+	display: flex;
+	gap: 2vw;
 }
 
 .Catalog-Main-ItemsAndFilters-Items {
-  flex-grow: 1;
-  width: 75%;
-  height: 50vw;
-  display: grid;
-  gap: 2vw;
-  grid-template-rows: repeat(4, 1fr);
-  grid-template-columns: repeat(4, 1fr);
-  color: black;
-  border-radius: 1vw;
+	flex-grow: 1;
+	width: 75%;
+	height: 50vw;
+	display: grid;
+	gap: 2vw;
+	grid-template-rows: repeat(4, 1fr);
+	grid-template-columns: repeat(4, 1fr);
+	color: black;
+	border-radius: 1vw;
 }
 
 .Catalog-Main-ItemsAndFilters-Filters {
-  flex-grow: 10;
-  max-height: 8.5vw;
-  display: flex;
-  justify-content: left;
-  flex-direction: column;
-  padding: 1.5vw;
-  background-color: white;
-  color: black;
-  border-radius: 1vw;
-  box-shadow: 0.5vw 0.7vw 0.25vw 0px rgba(0, 0, 0, 0.25);
+	flex-grow: 10;
+	max-height: 8.5vw;
+	display: flex;
+	justify-content: left;
+	flex-direction: column;
+	padding: 1.5vw;
+	background-color: white;
+	color: black;
+	border-radius: 1vw;
+	box-shadow: 0.5vw 0.7vw 0.25vw 0px rgba(0, 0, 0, 0.25);
 }
 
 .Catalog-Main-Header {
-  display: flex;
-  margin-top: 2vw;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 2vw;
-  font-style: normal;
-  font-weight: 700;
-  color: black;
+	display: flex;
+	margin-top: 2vw;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size: 2vw;
+	font-style: normal;
+	font-weight: 700;
+	color: black;
 }
 
 .Catalog-Main-ItemsAndFilters-Filters-Header {
-  display: flex;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 1.5vw;
-  font-style: normal;
-  font-weight: 700;
-  color: black;
+	display: flex;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size: 1.5vw;
+	font-style: normal;
+	font-weight: 700;
+	color: black;
 }
 
 .Catalog-Main-ItemsAndFilters-Filters-CheckBox {
-  display: flex;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 1vw;
-  font-style: normal;
-  font-weight: 400;
-  color: black;
-  align-items: center;
+	display: flex;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size: 1vw;
+	font-style: normal;
+	font-weight: 400;
+	color: black;
+	align-items: center;
 }
 
 .container {
-  display: flex;
-  position: relative;
-  padding-left: 3vw;
-  margin-bottom: 1vw;
-  margin-top: 1vw;
-  cursor: pointer;
-  font-size: 1.25vw;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+	display: flex;
+	position: relative;
+	padding-left: 3vw;
+	margin-bottom: 1vw;
+	margin-top: 1vw;
+	cursor: pointer;
+	font-size: 1.25vw;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 .container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
 }
 
 .checkmark {
-  display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 2vw;
-  width: 2vw;
-  background-color: #eeeeee;
-  border-radius: 25%;
+	display: flex;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 2vw;
+	width: 2vw;
+	background-color: #eeeeee;
+	border-radius: 25%;
 }
 
 .container:hover input ~ .checkmark {
-  background-color: #ccc;
+	background-color: #ccc;
 }
 
 .checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
+	content: '';
+	position: absolute;
+	display: none;
 }
 
 .container input:checked ~ .checkmark:after {
-  display: flex;
+	display: flex;
 }
 
 .container .checkmark:after {
-  left: 0.75vw;
-  top: 0.35vw;
-  width: 0.3vw;
-  height: 0.8vw;
-  border: solid black;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+	left: 0.75vw;
+	top: 0.35vw;
+	width: 0.3vw;
+	height: 0.8vw;
+	border: solid black;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
 }
 
 .Catalog-Main-ItemsAndFilters-Filters-Category {
-  display: flex;
+	display: flex;
 }
 
 .custom-select {
-  display: flex;
-  min-width: 17vw;
-  position: relative;
+	display: flex;
+	min-width: 17vw;
+	position: relative;
 }
 
 select {
-  display: flex;
-  appearance: none;
-  -webkit-appearance: none;
-  width: 100%;
-  font-size: 1vw;
-  padding: 0.675em 6em 0.675em 1em;
-  background-color: #fff;
-  border: 0.2vw solid black;
-  border-radius: 0.25rem;
-  color: #000;
-  cursor: pointer;
+	display: flex;
+	appearance: none;
+	-webkit-appearance: none;
+	width: 100%;
+	font-size: 1vw;
+	padding: 0.675em 6em 0.675em 1em;
+	background-color: #fff;
+	border: 0.2vw solid black;
+	border-radius: 0.25rem;
+	color: #000;
+	cursor: pointer;
 }
-
-
 
 .custom-select::before,
 .custom-select::after {
-  --size: 0.3vw;
-  content: "";
-  position: absolute;
-  right: 1vw;
-  pointer-events: none;
+	--size: 0.3vw;
+	content: '';
+	position: absolute;
+	right: 1vw;
+	pointer-events: none;
 }
 
 .custom-select::before {
-  border-left: var(--size) solid transparent;
-  border-right: var(--size) solid transparent;
-  border-bottom: var(--size) solid black;
-  top: 40%;
+	border-left: var(--size) solid transparent;
+	border-right: var(--size) solid transparent;
+	border-bottom: var(--size) solid black;
+	top: 40%;
 }
 
 .custom-select::after {
-  border-left: var(--size) solid transparent;
-  border-right: var(--size) solid transparent;
-  border-top: var(--size) solid black;
-  top: 55%;
+	border-left: var(--size) solid transparent;
+	border-right: var(--size) solid transparent;
+	border-top: var(--size) solid black;
+	top: 55%;
 }

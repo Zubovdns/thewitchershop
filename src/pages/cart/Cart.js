@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import CardSetItemVertical from '../../components/card_set_item_vertical/CardSetItemVertical';
+import { Context } from '../../index';
 import image from '../main_screen/img/Placeholder_img.png';
 import './css/Cart.css';
 
 function NavMenu() {
+	const { user } = useContext(Context);
+
+	const logOut = () => {
+		user.setIsAuth(false);
+		user.setUser({});
+	};
+
 	return (
 		<div className='Cart-Main'>
 			<div className='Cart-Main-Header'>Корзина</div>
@@ -43,6 +51,14 @@ function NavMenu() {
 					</div>
 					<div className='Cost-PurchaseButton'>
 						<button className='Purchase-Button'>Заказать</button>
+					</div>
+					<div
+						className='Cost-PurchaseButton'
+						onClick={() => {
+							logOut();
+						}}
+					>
+						<button className='Purchase-Button'>Выйти</button>
 					</div>
 				</div>
 			</div>

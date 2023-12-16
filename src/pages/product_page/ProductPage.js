@@ -1,24 +1,29 @@
-import React, { useState } from 'react';
-import CardSetItem from '../../components/card_set_item/CardSetItem';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { fetchOneProduct } from '../../http/productAPI';
 import './css/ProductPage.css';
-import placeholder from './img/Placeholder_img.png';
 import instagramIcon from './img/instagram_img.png';
 import telegramIcon from './img/telegram_img.png';
 import vkIcon from './img/vk_img.png';
 
-
 function ProductPage() {
-	const [isClicked,setIsClicked] = useState(false);
+	const [isClicked, setIsClicked] = useState(false);
 
-	function handeClick(){
-		setIsClicked(state => true);
+	const [product, setProduct] = useState({ info: [] });
+	const { id } = useParams();
+	useEffect(() => {
+		fetchOneProduct(id).then((data) => setProduct(data));
+	}, []);
+
+	function handeClick() {
+		setIsClicked((state) => true);
 	}
 
- 	return (
+	return (
 		<div className='ProductPage'>
 			<div className='ProductPage-body'>
 				<div className='ProductPage-label'>
-					<a className='ProductPage-label-text'>Кружка “Белый Волк”</a>
+					<a className='ProductPage-label-text'>{product.name}</a>
 				</div>
 				<div className='ProductPage-path'>
 					<a className='ProductPage-path-text'>
@@ -28,26 +33,15 @@ function ProductPage() {
 				<div className='ProductPage-product-card'>
 					<div className='ProductPage-product-body'>
 						<div className='ProductPage-product-div-image'>
-							<img className='ProductPage-product-image' src={placeholder} />
+							<img
+								className='ProductPage-product-image'
+								src={process.env.REACT_APP_API_URL + product.img}
+							/>
 						</div>
 						<div className='ProductPage-product-description'>
 							<a className='ProductPage-product-description-label'>Описание</a>
 							<a className='ProductPage-product-description-text'>
-								Few things are more dangerous than a hungry cyberpunk — perhaps
-								only a cyberpsycho close to the edge! So, if you’ve been
-								searching Night City for a byte-sized, high-tech snack, then
-								this 1.5” zinc alloy wonder has you covered.
-							</a>
-							<a className='ProductPage-product-description-text'>
-								This mouth-watering pin resembles a little-known delicacy of the
-								dark future — one that would even tempt sleeper agent Solomon
-								Reed out of the shadows.
-							</a>
-							<a className='ProductPage-product-description-text'>
-								Whether you're a data-hungry netrunner or a flavor-loving street
-								samurai, the Cyberpunk 2077: Cyber Quesadilla Pin is a must-have
-								addition to your collection. Get ready to embrace your inner
-								cyber-foodie!
+								{product.description}
 							</a>
 						</div>
 					</div>
@@ -55,12 +49,14 @@ function ProductPage() {
 						<div className='ProductPage-product-wrapper'>
 							<div className='ProductPage-product-buy'>
 								<div className='ProductPage-product-buy-content'>
-									<a className='ProductPage-product-buy-cost'>$14.99</a>
-									<a className='ProductPage-product-buy-width'>Ширина: 30см</a>
-									<a className='ProductPage-product-buy-height'>Высота: 25см</a>
-									<a className='ProductPage-product-buy-availability'>
-										Наличие: отсутствует
+									<a className='ProductPage-product-buy-cost'>
+										{'$' + product.price}
 									</a>
+									{product.info.map((info) => (
+										<a key={info.id} className='ProductPage-product-buy-width'>
+											{info.title + ': ' + info.description}
+										</a>
+									))}
 								</div>
 
 								<input
@@ -69,8 +65,13 @@ function ProductPage() {
 									min='1'
 									max='10'
 								></input>
-								<button className={`ProductPage-product-buy-button ${isClicked ?  "ProductPage-product-buy-button-clicked" : ""}`}  onClick={handeClick}>
-									{isClicked ? "В корзине" : "Добавить в корзину"}
+								<button
+									className={`ProductPage-product-buy-button ${
+										isClicked ? 'ProductPage-product-buy-button-clicked' : ''
+									}`}
+									onClick={handeClick}
+								>
+									{isClicked ? 'В корзине' : 'Добавить в корзину'}
 								</button>
 							</div>
 							<div className='ProductPage-product-share'>
@@ -100,7 +101,7 @@ function ProductPage() {
 				<div className='ProductPage-see-also'>
 					<p className='ProductPage-see-also-label'>Смотрите также</p>
 					<div className='ProductPage-see-also-body'>
-						<CardSetItem
+						{/* <CardSetItem
 							imageSrc={instagramIcon}
 							labelText='Кружка "Белый волк"'
 							priceText='$14.99'
@@ -124,7 +125,7 @@ function ProductPage() {
 							imageSrc={instagramIcon}
 							labelText='Кружка "Белый волк"'
 							priceText='$14.99'
-						/>
+						/> */}
 					</div>
 				</div>
 			</div>
