@@ -43,6 +43,10 @@ const Auth = observer(() => {
 				<p className='Auth-form-label'>
 					{isLogin ? 'Авторизация' : 'Регистрация'}
 				</p>
+				
+				<div className='Auth-form-inputDiv'>
+				<div className='Auth-form-firstInputDiv'>
+				<p className='Auth-form-username'>Логин</p>
 				<input
 					type='text'
 					value={email}
@@ -51,6 +55,9 @@ const Auth = observer(() => {
 					}}
 					className='Auth-form-input'
 				/>
+				</div>
+				<div className='Auth-form-secondInputDiv'>
+				<p className='Auth-form-username'>Пароль</p>
 				<input
 					type='text'
 					value={password}
@@ -59,12 +66,14 @@ const Auth = observer(() => {
 					}}
 					className='Auth-form-input'
 				/>
+				</div>
+				</div>
 				<button className='Auth-form-login' onClick={click}>
 					{isLogin ? 'Войти' : 'Зарегистрироваться'}
 				</button>
 				<div className='Auth-form-registration'>
 					{isLogin ? (
-						<>
+						<p className='Auth-form-registration-text'>
 							Нет аккаунта?{' '}
 							<Link
 								to={REGISTRATION_ROUTE}
@@ -74,9 +83,9 @@ const Auth = observer(() => {
 							>
 								Зарегистрируйся!
 							</Link>
-						</>
+						</p>
 					) : (
-						<>
+						<p className='Auth-form-registration-text'>
 							Есть аккаунт?{' '}
 							<Link
 								to={LOGIN_ROUTE}
@@ -86,7 +95,7 @@ const Auth = observer(() => {
 							>
 								Войти!
 							</Link>
-						</>
+						</p>
 					)}
 				</div>
 			</div>
