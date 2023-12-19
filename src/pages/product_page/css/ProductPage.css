@@ -68,8 +68,11 @@
 	align-items: center;
 }
 
+
+
 .ProductPage-product-buy {
 	align-items: baseline;
+	
 }
 
 .ProductPage-product-div-image {
@@ -77,10 +80,7 @@
 }
 
 .ProductPage-product-image {
-	height: 100%;
-	width: 100%;
-	max-height: 40vw;
-	max-width: 70vw;
+	height: 40vw;
 }
 
 .ProductPage-product-buy-cost {
@@ -114,6 +114,7 @@
 	border: 0.3vw black solid;
 	border-radius: 0.7vw;
 }
+
 
 .ProductPage-product-buy-amount:focus {
 	outline: none;
@@ -161,7 +162,7 @@
 	transition: 0.5s;
 }
 
-.ProductPage-product-buy-button-clicked:disabled {
+.ProductPage-product-buy-button-clicked {
 	background-color: lightgray;
 }
 
@@ -169,6 +170,7 @@
 	background-color: #b3b4b4;
 	transition: 0.1s;
 }
+
 
 .ProductPage-product-share {
 	display: flex;
@@ -236,7 +238,8 @@
 	gap: 2vw;
 }
 
-.ProductPage-product-wrapper {
+
+.ProductPage-product-wrapper{
 	position: sticky;
 	top: 4.5vw;
 	padding-bottom: 0.05vw;
