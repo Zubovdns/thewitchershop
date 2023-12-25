@@ -6,6 +6,14 @@ const Types = observer(() => {
 	const { product } = useContext(Context);
 	return (
 		<div>
+			<p
+				key={0}
+				onClick={() => {
+					product.setSelectedType(null);
+				}}
+			>
+				Все
+			</p>
 			{product.types.map((type) => (
 				<p
 					key={type.id}

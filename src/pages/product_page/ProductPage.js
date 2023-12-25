@@ -1,22 +1,31 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { addProductOnBasket } from '../../http/basketAPI';
 import { fetchOneProduct } from '../../http/productAPI';
+import { Context } from '../../index';
 import './css/ProductPage.css';
 import instagramIcon from './img/instagram_img.png';
 import telegramIcon from './img/telegram_img.png';
 import vkIcon from './img/vk_img.png';
 
 function ProductPage() {
-	const [isClicked, setIsClicked] = useState(false);
+	const { user } = useContext(Context);
 
+	const [isClicked, setIsClicked] = useState(false);
+	const [value, setValue] = useState(1);
 	const [product, setProduct] = useState({ info: [] });
+
 	const { id } = useParams();
 	useEffect(() => {
 		fetchOneProduct(id).then((data) => setProduct(data));
 	}, []);
 
-	function handeClick() {
-		setIsClicked((state) => true);
+	const handleValueChange = (event) => {
+		setValue(event.target.value);
+	};
+
+	function handleClick() {
+		addProductOnBasket(product.id, value).then(setIsClicked(true));
 	}
 
 	return (
@@ -63,13 +72,15 @@ function ProductPage() {
 									className='ProductPage-product-buy-amount'
 									type='number'
 									min='1'
-									max='10'
+									max='99'
+									value={value}
+									onChange={handleValueChange}
 								></input>
 								<button
 									className={`ProductPage-product-buy-button ${
 										isClicked ? 'ProductPage-product-buy-button-clicked' : ''
 									}`}
-									onClick={handeClick}
+									onClick={handleClick}
 								>
 									{isClicked ? 'В корзине' : 'Добавить в корзину'}
 								</button>
