@@ -108,37 +108,6 @@ function ProductPage() {
 						</div>
 					</div>
 				</div>
-
-				<div className='ProductPage-see-also'>
-					<p className='ProductPage-see-also-label'>Смотрите также</p>
-					<div className='ProductPage-see-also-body'>
-						{/* <CardSetItem
-							imageSrc={instagramIcon}
-							labelText='Кружка "Белый волк"'
-							priceText='$14.99'
-						/>
-						<CardSetItem
-							imageSrc={instagramIcon}
-							labelText='Кружка "Белый волк"'
-							priceText='$14.99'
-						/>
-						<CardSetItem
-							imageSrc={instagramIcon}
-							labelText='Кружка "Белый волк"'
-							priceText='$14.99'
-						/>
-						<CardSetItem
-							imageSrc={instagramIcon}
-							labelText='Кружка "Белый волк"'
-							priceText='$14.99'
-						/>
-						<CardSetItem
-							imageSrc={instagramIcon}
-							labelText='Кружка "Белый волк"'
-							priceText='$14.99'
-						/> */}
-					</div>
-				</div>
 			</div>
 		</div>
 	);

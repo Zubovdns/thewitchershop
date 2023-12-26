@@ -18,12 +18,24 @@
 	padding: 2vw 1vw;
 }
 
+.CardSetItem-content-image-div {
+	width: 13vw;
+	height: 10vw;
+}
+
 .CardSetItem-content-image {
-	width: 10vw;
+	max-width: 100%;
+	max-height: 100%;
+	position: relative;
+	width: auto;
 	height: auto;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .CardSetItem-content-label-content {
+	margin-top: 1vw;
 	display: flex;
 	flex-direction: column;
 	text-decoration: none;

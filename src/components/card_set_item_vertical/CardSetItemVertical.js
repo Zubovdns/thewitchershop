@@ -1,17 +1,17 @@
 import { observer } from 'mobx-react-lite';
-import React, { useState } from 'react';
+import React from 'react';
 import { deleteProductFromBasket } from '../../http/basketAPI';
 import './css/CardSetItemVertical.css';
 
-const CardSetItemVertical = observer(({ product, quantity }) => {
-	const [value, setValue] = useState(quantity);
-
-	const handleValueChange = (event) => {
-		setValue(event.target.value);
-	};
-
+const CardSetItemVertical = observer(({ product, quantity, onCheck }) => {
 	const handleDelete = () => {
-		deleteProductFromBasket(product.id);
+		deleteProductFromBasket(product.id)
+			.then(() => {
+				onCheck();
+			})
+			.catch((error) => {
+				console.error('Error deleting product from basket:', error);
+			});
 	};
 
 	return (
@@ -27,14 +27,8 @@ const CardSetItemVertical = observer(({ product, quantity }) => {
 						{'$' + product?.price}
 					</p>
 				</div>
-				<input
-					class='Quantity'
-					type='number'
-					min='1'
-					max='99'
-					value={value}
-					onChange={handleValueChange}
-				></input>
+
+				<p className='CardSetItemVertical-content-price'>{quantity} шт.</p>
 				<button
 					className='CardSetItemVertical-content-button'
 					onClick={handleDelete}

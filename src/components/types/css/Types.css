@@ -1,0 +1,7 @@
+.Catalog-Main-ItemsAndFilters-Filters-Category-text {
+	cursor: pointer;
+	font-size: 1.25vw;
+}
+.Catalog-Main-ItemsAndFilters-Filters-Category-text:hover {
+	text-decoration: underline;
+}
