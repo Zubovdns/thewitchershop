@@ -111,7 +111,8 @@
 	justify-content: center;
 }
 
-.Purchase-Button {
+.Purchase-Button,
+.Quit-Button {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -127,7 +128,15 @@
 	transition: 0.2s;
 }
 
-.Purchase-Button:active {
+.Purchase-Button:active,
+.Quit-Button:active {
 	background-color: #b3b4b4;
 	transition: 0.1s;
+}
+
+.Quit-Button {
+	background-color: rgb(202, 0, 0);
+}
+.Quit-Button:active {
+	background-color: #964141;
 }

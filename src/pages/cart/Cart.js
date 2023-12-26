@@ -81,7 +81,7 @@ const NavMenu = observer(() => {
 							logOut();
 						}}
 					>
-						<button className='Purchase-Button'>Выйти</button>
+						<button className='Quit-Button'>Выйти</button>
 					</div>
 				</div>
 			</div>
