@@ -14,3 +14,7 @@ export const fetchOneProduct = async (id) => {
 	const { data } = await $host.get('api/product/' + id);
 	return data;
 };
+export const getTopOnCategory = async () => {
+	const { data } = await $host.get('api/product/top');
+	return data;
+};

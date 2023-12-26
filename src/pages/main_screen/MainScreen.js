@@ -1,18 +1,24 @@
-import React from 'react';
+import { observer } from 'mobx-react-lite';
+import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import CardSetItem from '../../components/card_set_item/CardSetItem';
+import { getTopOnCategory } from '../../http/productAPI';
+import { Context } from '../../index';
 import './css/MainScreen.css';
 import offerImg from './img/offer_img.jpeg';
 import posterTop from './img/poster_top_img.jpeg';
 import witcherEmblemImg from './img/witcher_emblem_img.png';
-// import Swiper core and required modules
 
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
+const MainScreen = observer(() => {
+	const { product } = useContext(Context);
 
-function MainScreen() {
+	useEffect(() => {
+		getTopOnCategory().then((data) => {
+			product.setProducts(data);
+			console.log(product);
+		});
+	}, []);
+
 	return (
 		<div className='MainScreen'>
 			<div className='MainScreen-body'>
@@ -36,6 +42,16 @@ function MainScreen() {
 							<hr className='Catalog-Main-Poster-Line'></hr>
 							<p className='Catalog-Main-Poster-Bottom'>90% OFF</p>
 						</div>
+					</div>
+				</div>
+				<div className='MainScreen-topOnCategory'>
+					<p className='MainScreen-topOnCategory-label'>
+						Топ товаров по категориям
+					</p>
+					<div className='MainScreen-topOnCategory-list'>
+						{product.products.map((product) => (
+							<CardSetItem key={product.id} product={product} />
+						))}
 					</div>
 				</div>
 
@@ -65,6 +81,6 @@ function MainScreen() {
 			</div>
 		</div>
 	);
-}
+});
 
 export default MainScreen;
