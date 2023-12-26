@@ -17,14 +17,16 @@ const CardSetItemVertical = observer(({ product, quantity, onCheck }) => {
 	return (
 		<div className='CardSetItemVertical'>
 			<div className='CardSetItemVertical-content'>
-				<img
-					className='CardSetItemVertical-content-image'
-					src={process.env.REACT_APP_API_URL + product?.img}
-				></img>
+				<div className='CardSetItemVertical-content-image-div'>
+					<img
+						className='CardSetItemVertical-content-image'
+						src={process.env.REACT_APP_API_URL + product?.img}
+					></img>
+				</div>
 				<div className='CardSetItemVertical-content-label-content'>
 					<p className='CardSetItemVertical-content-label'>{product?.name}</p>
 					<p className='CardSetItemVertical-content-price'>
-						{'$' + product?.price}
+						{product?.price + ' р.'}
 					</p>
 				</div>
 

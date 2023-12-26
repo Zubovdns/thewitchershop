@@ -62,15 +62,15 @@ const NavMenu = observer(() => {
 							src={basketEmpty}
 						/>
 						<p className='Cart-Main-ItemsAndCost-Items-Empty-Text'>
-							Упс. Похоже здесь ничего нет.
+							Упс! Похоже здесь ничего нет.
 						</p>
 					</div>
 				)}
 				<div className='Cart-Main-ItemsAndCost-Cost'>
 					<div className='Cost-TopText'>
-						<p className='Cost'>Стоимость: ${basket.cost.firstCost}</p>
-						<p className='Sale'>Скидка: ${basket.cost.discount}</p>
-						<p className='Payment'>К оплате: ${basket.cost.totalCost}</p>
+						<p className='Cost'>Стоимость: {basket.cost.firstCost} р.</p>
+						<p className='Sale'>Скидка: {basket.cost.discount} р.</p>
+						<p className='Payment'>К оплате: {basket.cost.totalCost} р.</p>
 					</div>
 					<div className='Cost-PurchaseButton'>
 						<button className='Purchase-Button'>Заказать</button>

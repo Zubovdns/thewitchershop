@@ -59,7 +59,7 @@ function ProductPage() {
 							<div className='ProductPage-product-buy'>
 								<div className='ProductPage-product-buy-content'>
 									<a className='ProductPage-product-buy-cost'>
-										{'$' + product.price}
+										{product.price + ' р.'}
 									</a>
 									{product.info.map((info) => (
 										<a key={info.id} className='ProductPage-product-buy-width'>

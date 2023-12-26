@@ -46,7 +46,6 @@ const NavMenu = observer(() => {
 			>
 				О нас
 			</Link>
-			<input type='text' className='NavMenu-input' />
 
 			{user.isAuth ? (
 				<Link

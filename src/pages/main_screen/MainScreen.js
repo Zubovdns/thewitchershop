@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Carousel from '../../components/carousel/Carousel';
 import './css/MainScreen.css';
-import placeholder from './img/Placeholder_img.png';
 import offerImg from './img/offer_img.jpeg';
 import posterTop from './img/poster_top_img.jpeg';
 import witcherEmblemImg from './img/witcher_emblem_img.png';
@@ -40,112 +38,7 @@ function MainScreen() {
 						</div>
 					</div>
 				</div>
-				<div className='MainScreen-card-set'>
-					<p className='MainScreen-card-set-label'>Рекомендуем</p>
-					<Carousel>
-						{/* <CardSetItem
-							imageSrc={placeholder}
-							labelText="Кружка 'Белый Волк'"
-							priceText='$14.999'
-						/> */}
-						<div className='MainScreen-card-set-item'>
-							<div className='MainScreen-card-set-item-content'>
-								<img
-									className='MainScreen-card-set-item-content-image'
-									src={placeholder}
-								/>
-								<div className='MainScreen-card-set-item-content-label-content'>
-									<p className='MainScreen-card-set-item-content-label'>
-										Кружка “Белый Волк”
-									</p>
-									<p className='MainScreen-card-set-item-content-price'>
-										$14.99
-									</p>
-								</div>
-							</div>
-						</div>
-						<div className='MainScreen-card-set-item'>
-							<div className='MainScreen-card-set-item-content'>
-								<img
-									className='MainScreen-card-set-item-content-image'
-									src={placeholder}
-								/>
-								<div className='MainScreen-card-set-item-content-label-content'>
-									<p className='MainScreen-card-set-item-content-label'>
-										Кружка “Белый Волк”
-									</p>
-									<p className='MainScreen-card-set-item-content-price'>
-										$14.99
-									</p>
-								</div>
-							</div>
-						</div>
-						<div className='MainScreen-card-set-item'>
-							<div className='MainScreen-card-set-item-content'>
-								<img
-									className='MainScreen-card-set-item-content-image'
-									src={placeholder}
-								/>
-								<div className='MainScreen-card-set-item-content-label-content'>
-									<p className='MainScreen-card-set-item-content-label'>
-										Кружка “Белый Волк”
-									</p>
-									<p className='MainScreen-card-set-item-content-price'>
-										$14.99
-									</p>
-								</div>
-							</div>
-						</div>
-						<div className='MainScreen-card-set-item'>
-							<div className='MainScreen-card-set-item-content'>
-								<img
-									className='MainScreen-card-set-item-content-image'
-									src={placeholder}
-								/>
-								<div className='MainScreen-card-set-item-content-label-content'>
-									<p className='MainScreen-card-set-item-content-label'>
-										Кружка “Белый Волк”
-									</p>
-									<p className='MainScreen-card-set-item-content-price'>
-										$14.99
-									</p>
-								</div>
-							</div>
-						</div>
-						<div className='MainScreen-card-set-item'>
-							<div className='MainScreen-card-set-item-content'>
-								<img
-									className='MainScreen-card-set-item-content-image'
-									src={placeholder}
-								/>
-								<div className='MainScreen-card-set-item-content-label-content'>
-									<p className='MainScreen-card-set-item-content-label'>
-										Кружка “Белый Волк”
-									</p>
-									<p className='MainScreen-card-set-item-content-price'>
-										$14.99
-									</p>
-								</div>
-							</div>
-						</div>
-						<div className='MainScreen-card-set-item'>
-							<div className='MainScreen-card-set-item-content'>
-								<img
-									className='MainScreen-card-set-item-content-image'
-									src={placeholder}
-								/>
-								<div className='MainScreen-card-set-item-content-label-content'>
-									<p className='MainScreen-card-set-item-content-label'>
-										Кружка “Белый Волк”
-									</p>
-									<p className='MainScreen-card-set-item-content-price'>
-										$14.99
-									</p>
-								</div>
-							</div>
-						</div>
-					</Carousel>
-				</div>
+
 				<div className='MainScreen-offer'>
 					<div className='MainScreen-offer-1'>
 						<div className='MainScreen-offer-1-content'>
