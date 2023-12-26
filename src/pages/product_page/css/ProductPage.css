@@ -77,10 +77,17 @@
 
 .ProductPage-product-div-image {
 	overflow: hidden;
+	width: auto;
+	max-height: 40vw;
+	position: relative;
 }
 
 .ProductPage-product-image {
-	height: 40vw;
+	max-width: 100%;
+	max-height: 35vw;
+	width: auto;
+	height: 100%;
+	display: block;
 }
 
 .ProductPage-product-buy-cost {
@@ -113,6 +120,7 @@
 	width: 15vw;
 	border: 0.3vw black solid;
 	border-radius: 0.7vw;
+	font-size: 1.5vw;
 }
 
 
@@ -158,8 +166,9 @@
 	width: 16vw;
 	font-size: 1.2vw;
 	font-weight: 700;
-	cursor: pointer;
+	cursor: not-allowed;
 	transition: 0.5s;
+	pointer-events: none;
 }
 
 .ProductPage-product-buy-button-clicked {
@@ -238,8 +247,7 @@
 	gap: 2vw;
 }
 
-
-.ProductPage-product-wrapper{
+.ProductPage-product-wrapper {
 	position: sticky;
 	top: 4.5vw;
 	padding-bottom: 0.05vw;

@@ -1,26 +1,43 @@
-import PropTypes from "prop-types";
-import React from "react";
-import "./css/CardSetItemVertical.css";
+import { observer } from 'mobx-react-lite';
+import React from 'react';
+import { deleteProductFromBasket } from '../../http/basketAPI';
+import './css/CardSetItemVertical.css';
 
-const CardSetItemVertical = ({imageSrc, productText ,price}) => {
-  return (
-    <div className="CardSetItemVertical">
-      <div className="CardSetItemVertical-content">
-        <img className="CardSetItemVertical-content-image" src={imageSrc}></img>
-        <div className="CardSetItemVertical-content-label-content">
-          <p className="CardSetItemVertical-content-label">{productText}</p>
-          <p className="CardSetItemVertical-content-price">{price}</p>
-        </div>
-        <input class="Quantity" type="number"  min="1" max="15"></input>
-        <button className="CardSetItemVertical-content-button">Удалить</button>
-      </div>
-    </div>
-  );
-};
+const CardSetItemVertical = observer(({ product, quantity, onCheck }) => {
+	const handleDelete = () => {
+		deleteProductFromBasket(product.id)
+			.then(() => {
+				onCheck();
+			})
+			.catch((error) => {
+				console.error('Error deleting product from basket:', error);
+			});
+	};
 
-CardSetItemVertical.propTypes = {
-  imageSrc: PropTypes.string.isRequired,
-  price: PropTypes.string.isRequired,
-};
+	return (
+		<div className='CardSetItemVertical'>
+			<div className='CardSetItemVertical-content'>
+				<img
+					className='CardSetItemVertical-content-image'
+					src={process.env.REACT_APP_API_URL + product?.img}
+				></img>
+				<div className='CardSetItemVertical-content-label-content'>
+					<p className='CardSetItemVertical-content-label'>{product?.name}</p>
+					<p className='CardSetItemVertical-content-price'>
+						{'$' + product?.price}
+					</p>
+				</div>
+
+				<p className='CardSetItemVertical-content-price'>{quantity} шт.</p>
+				<button
+					className='CardSetItemVertical-content-button'
+					onClick={handleDelete}
+				>
+					Удалить
+				</button>
+			</div>
+		</div>
+	);
+});
 
 export default CardSetItemVertical;

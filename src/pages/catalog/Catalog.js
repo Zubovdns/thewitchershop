@@ -18,7 +18,7 @@ const Catalog = observer(() => {
 	}, []);
 
 	useEffect(() => {
-		fetchProducts(product.selectedType.id, 100, 1).then((data) => {
+		fetchProducts(product.selectedType?.id, 100, 1).then((data) => {
 			product.setProducts(data.rows);
 			product.setTotalCount(data.count);
 		});

@@ -1,22 +1,8 @@
 .Catalog-Main-ItemsAndFilters-Items {
 	flex-grow: 1;
 	width: 75%;
-	height: 50vw;
 	display: grid;
 	gap: 2vw;
-	grid-template-rows: repeat(4, 1fr);
-	grid-template-columns: repeat(4, 1fr);
-	color: black;
-	border-radius: 1vw;
-}
-
-.Catalog-Main-ItemsAndFilters-Items {
-	flex-grow: 1;
-	width: 75%;
-	height: 50vw;
-	display: grid;
-	gap: 2vw;
-	grid-template-rows: repeat(4, 1fr);
 	grid-template-columns: repeat(4, 1fr);
 	color: black;
 	border-radius: 1vw;

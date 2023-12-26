@@ -15,13 +15,15 @@ const CardSetItem = ({ product }) => {
 		>
 			<div className='CardSetItem'>
 				<div className='CardSetItem-content'>
-					<img
-						className='CardSetItem-content-image'
-						src={process.env.REACT_APP_API_URL + product.img}
-					/>
+					<div className='CardSetItem-content-image-div'>
+						<img
+							className='CardSetItem-content-image'
+							src={process.env.REACT_APP_API_URL + product.img}
+						/>
+					</div>
 					<div className='CardSetItem-content-label-content'>
 						<p className='CardSetItem-content-label'>{product.name}</p>
-						<p className='CardSetItem-content-price'>{product.price}</p>
+						<p className='CardSetItem-content-price'>{'$' + product.price}</p>
 					</div>
 				</div>
 			</div>
