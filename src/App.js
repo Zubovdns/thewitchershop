@@ -1,15 +1,28 @@
-import React, { useContext } from 'react';
+import { observer } from 'mobx-react-lite';
+import React, { useContext, useEffect, useState } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
+import { check } from './http/userAPI';
 import { Context } from './index';
 import Footer from './pages/footer/Footer';
 import NavMenu from './pages/nav_menu/NavMenu';
 import { authRoutes, publicRoutes } from './routes';
 
-const App = () => {
+const App = observer(() => {
 	const { user } = useContext(Context);
+	const [loading, setLoading] = useState(true);
 
-	console.log(user);
+	useEffect(() => {
+		check()
+			.then((data) => {
+				user.setUser(true);
+				user.setIsAuth(true);
+			})
+			.finally(() => {
+				setLoading(false);
+			});
+	}, []);
+
 	return (
 		<>
 			<NavMenu />
@@ -28,5 +41,6 @@ const App = () => {
 			<Footer />
 		</>
 	);
-};
+});
+
 export default App;

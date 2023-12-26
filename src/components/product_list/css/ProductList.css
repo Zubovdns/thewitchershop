@@ -1,0 +1,9 @@
+.Catalog-Main-ItemsAndFilters-Items {
+	flex-grow: 1;
+	width: 75%;
+	display: grid;
+	gap: 2vw;
+	grid-template-columns: repeat(4, 1fr);
+	color: black;
+	border-radius: 1vw;
+}

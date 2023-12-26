@@ -6,6 +6,13 @@ import placeholder from './img/Placeholder_img.png';
 import offerImg from './img/offer_img.jpeg';
 import posterTop from './img/poster_top_img.jpeg';
 import witcherEmblemImg from './img/witcher_emblem_img.png';
+// import Swiper core and required modules
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 function MainScreen() {
 	return (

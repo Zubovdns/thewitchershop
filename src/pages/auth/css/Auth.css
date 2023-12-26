@@ -1,0 +1,108 @@
+.Auth {
+  margin-top: 3vw;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding-top: 4vw;
+  flex-direction: column;
+  background-color: #eeeeee;
+  padding-bottom: 25vw;
+}
+.Auth-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2vw;
+  width: 40%;
+  height: auto;
+  padding: 1.5vw;
+  background-color: white;
+  color: black;
+  border-radius: 1vw;
+  box-shadow: 0.5vw 0.7vw 0.25vw 0px rgba(0, 0, 0, 0.25);
+  margin-bottom: 1vw;
+}
+
+.Auth-form-label {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 2vw;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+  margin-top: 1vw;
+  margin-bottom: 1.5vw;
+  padding: 0;
+}
+
+.Auth-form-inputDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  margin-bottom: 1vw;
+}
+
+.Auth-form-input {
+  width: 20vw;
+  height: 1.9vw;
+  border-radius: 7px;
+  padding-left: 1vw;
+}
+
+.Auth-form-firstInputDiv {
+  gap: 0;
+  margin-bottom: 0.5vw;
+}
+
+.Auth-form-username {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1vw;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.Auth-form-secondInputDiv {
+  gap: 0;
+  margin-bottom: 2vw;
+}
+
+.Auth-form-login {
+  width: 15vw;
+  padding: 1vw;
+  background-color: black;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1vw;
+  font-style: normal;
+  font-weight: 700;
+  border: none;
+  border-radius: 7px;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.Auth-form-login:active {
+  transition: 0.1s;
+  background-color: gray;
+}
+
+.Auth-form-registration {
+  margin-top: 2vw;
+}
+
+.Auth-form-registration-text {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1vw;
+  font-style: normal;
+  font-weight: 700;
+  text-decoration: none;
+}
+
