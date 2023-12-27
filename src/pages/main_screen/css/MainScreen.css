@@ -102,68 +102,25 @@
 .MainScreen-poster-bottom-2-image {
 	width: 55vw;
 }
-
-.MainScreen-card-set {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	margin: 2vw 0vw 2vw 0vw;
-}
-
-.MainScreen-card-set-label {
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-		Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-	font-size: 2.5vw;
-	font-style: normal;
-	font-weight: 700;
-	line-height: normal;
-}
-
-.MainScreen-card-set-item {
+.MainScreen-topOnCategory {
+	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: white;
-	color: black;
-	border-radius: 1vw;
-	box-shadow: 0.5vw 0.7vw 0.25vw 0px rgba(0, 0, 0, 0.25);
+	flex-direction: column;
+	margin: 7vw;
 }
 
-.MainScreen-card-set-item-content {
+.MainScreen-topOnCategory-label {
+	font-size: 3vw;
+	font-weight: 600;
+}
+
+.MainScreen-topOnCategory-list {
 	display: flex;
-	flex-direction: column;
 	align-items: center;
-	justify-content: space-between;
-	width: 80%;
-	height: 85%;
-	padding: 2vw 1vw;
-}
-
-.MainScreen-card-set-item-content-image {
-	width: 10vw;
-	height: auto;
-}
-
-.MainScreen-card-set-item-content-label-content {
-	display: flex;
-	flex-direction: column;
-}
-
-.MainScreen-card-set-item-content-label,
-.MainScreen-card-set-item-content-price {
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-		Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-	font-size: 1.3vw;
-	font-style: normal;
-	text-align: left;
-	font-weight: 700;
-	line-height: normal;
-	margin: 0vw;
-}
-
-.MainScreen-card-set-item-content-price {
-	font-weight: 400;
+	justify-content: center;
+	gap: 8vw;
 }
 
 .MainScreen-offer {
@@ -220,18 +177,18 @@
 	width: 65vw;
 }
 
-.Catalog-Main-Poster-1{
+.Catalog-Main-Poster-1 {
 	border-radius: 2vw;
 	display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
-  height: 5%;
-  background-color: black;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+	height: 5%;
+	background-color: black;
 }
 
-.Link-to-catalog{
+.Link-to-catalog {
 	color: white;
 	text-decoration: none;
 }

@@ -1,20 +1,24 @@
-import React from 'react';
+import { observer } from 'mobx-react-lite';
+import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Carousel from '../../components/carousel/Carousel';
+import CardSetItem from '../../components/card_set_item/CardSetItem';
+import { getTopOnCategory } from '../../http/productAPI';
+import { Context } from '../../index';
 import './css/MainScreen.css';
-import placeholder from './img/Placeholder_img.png';
 import offerImg from './img/offer_img.jpeg';
 import posterTop from './img/poster_top_img.jpeg';
 import witcherEmblemImg from './img/witcher_emblem_img.png';
-// import Swiper core and required modules
 
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
+const MainScreen = observer(() => {
+	const { product } = useContext(Context);
 
-function MainScreen() {
+	useEffect(() => {
+		getTopOnCategory().then((data) => {
+			product.setProducts(data);
+			console.log(product);
+		});
+	}, []);
+
 	return (
 		<div className='MainScreen'>
 			<div className='MainScreen-body'>
@@ -40,112 +44,17 @@ function MainScreen() {
 						</div>
 					</div>
 				</div>
-				<div className='MainScreen-card-set'>
-					<p className='MainScreen-card-set-label'>Рекомендуем</p>
-					<Carousel>
-						{/* <CardSetItem
-							imageSrc={placeholder}
-							labelText="Кружка 'Белый Волк'"
-							priceText='$14.999'
-						/> */}
-						<div className='MainScreen-card-set-item'>
-							<div className='MainScreen-card-set-item-content'>
-								<img
-									className='MainScreen-card-set-item-content-image'
-									src={placeholder}
-								/>
-								<div className='MainScreen-card-set-item-content-label-content'>
-									<p className='MainScreen-card-set-item-content-label'>
-										Кружка “Белый Волк”
-									</p>
-									<p className='MainScreen-card-set-item-content-price'>
-										$14.99
-									</p>
-								</div>
-							</div>
-						</div>
-						<div className='MainScreen-card-set-item'>
-							<div className='MainScreen-card-set-item-content'>
-								<img
-									className='MainScreen-card-set-item-content-image'
-									src={placeholder}
-								/>
-								<div className='MainScreen-card-set-item-content-label-content'>
-									<p className='MainScreen-card-set-item-content-label'>
-										Кружка “Белый Волк”
-									</p>
-									<p className='MainScreen-card-set-item-content-price'>
-										$14.99
-									</p>
-								</div>
-							</div>
-						</div>
-						<div className='MainScreen-card-set-item'>
-							<div className='MainScreen-card-set-item-content'>
-								<img
-									className='MainScreen-card-set-item-content-image'
-									src={placeholder}
-								/>
-								<div className='MainScreen-card-set-item-content-label-content'>
-									<p className='MainScreen-card-set-item-content-label'>
-										Кружка “Белый Волк”
-									</p>
-									<p className='MainScreen-card-set-item-content-price'>
-										$14.99
-									</p>
-								</div>
-							</div>
-						</div>
-						<div className='MainScreen-card-set-item'>
-							<div className='MainScreen-card-set-item-content'>
-								<img
-									className='MainScreen-card-set-item-content-image'
-									src={placeholder}
-								/>
-								<div className='MainScreen-card-set-item-content-label-content'>
-									<p className='MainScreen-card-set-item-content-label'>
-										Кружка “Белый Волк”
-									</p>
-									<p className='MainScreen-card-set-item-content-price'>
-										$14.99
-									</p>
-								</div>
-							</div>
-						</div>
-						<div className='MainScreen-card-set-item'>
-							<div className='MainScreen-card-set-item-content'>
-								<img
-									className='MainScreen-card-set-item-content-image'
-									src={placeholder}
-								/>
-								<div className='MainScreen-card-set-item-content-label-content'>
-									<p className='MainScreen-card-set-item-content-label'>
-										Кружка “Белый Волк”
-									</p>
-									<p className='MainScreen-card-set-item-content-price'>
-										$14.99
-									</p>
-								</div>
-							</div>
-						</div>
-						<div className='MainScreen-card-set-item'>
-							<div className='MainScreen-card-set-item-content'>
-								<img
-									className='MainScreen-card-set-item-content-image'
-									src={placeholder}
-								/>
-								<div className='MainScreen-card-set-item-content-label-content'>
-									<p className='MainScreen-card-set-item-content-label'>
-										Кружка “Белый Волк”
-									</p>
-									<p className='MainScreen-card-set-item-content-price'>
-										$14.99
-									</p>
-								</div>
-							</div>
-						</div>
-					</Carousel>
+				<div className='MainScreen-topOnCategory'>
+					<p className='MainScreen-topOnCategory-label'>
+						Топ товаров по категориям
+					</p>
+					<div className='MainScreen-topOnCategory-list'>
+						{product.products.map((product) => (
+							<CardSetItem key={product.id} product={product} />
+						))}
+					</div>
 				</div>
+
 				<div className='MainScreen-offer'>
 					<div className='MainScreen-offer-1'>
 						<div className='MainScreen-offer-1-content'>
@@ -172,6 +81,6 @@ function MainScreen() {
 			</div>
 		</div>
 	);
-}
+});
 
 export default MainScreen;
