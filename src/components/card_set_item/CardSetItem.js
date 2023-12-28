@@ -23,7 +23,9 @@ const CardSetItem = ({ product }) => {
 					</div>
 					<div className='CardSetItem-content-label-content'>
 						<p className='CardSetItem-content-label'>{product.name}</p>
-						<p className='CardSetItem-content-price'>{product.price + ' р.'}</p>
+						<p className='CardSetItem-content-price'>
+							{product.inStock ? product.price + ' р.' : 'Нет в наличии'}
+						</p>
 					</div>
 				</div>
 			</div>
