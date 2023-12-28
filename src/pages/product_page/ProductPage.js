@@ -76,14 +76,20 @@ function ProductPage() {
 									value={value}
 									onChange={handleValueChange}
 								></input>
-								<button
-									className={`ProductPage-product-buy-button ${
-										isClicked ? 'ProductPage-product-buy-button-clicked' : ''
-									}`}
-									onClick={handleClick}
-								>
-									{isClicked ? 'В корзине' : 'Добавить в корзину'}
-								</button>
+								{product.inStock ? (
+									<button
+										className={`ProductPage-product-buy-button ${
+											isClicked ? 'ProductPage-product-buy-button-clicked' : ''
+										}`}
+										onClick={handleClick}
+									>
+										{isClicked ? 'В корзине' : 'Добавить в корзину'}
+									</button>
+								) : (
+									<button className='ProductPage-product-buy-button-clicked'>
+										Нет в наличии
+									</button>
+								)}
 							</div>
 							<div className='ProductPage-product-share'>
 								<a className='ProductPage-product-share-label'>Поделиться</a>

@@ -4,9 +4,9 @@ export const fetchCategories = async () => {
 	const { data } = await $host.get('api/category');
 	return data;
 };
-export const fetchProducts = async (categoryId, limit, page) => {
+export const fetchProducts = async (categoryId, limit, page, inStock) => {
 	const { data } = await $host.get('api/product', {
-		params: { categoryId, limit, page },
+		params: { categoryId, limit, page, inStock },
 	});
 	return data;
 };

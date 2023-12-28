@@ -68,23 +68,22 @@
 	align-items: center;
 }
 
-
-
 .ProductPage-product-buy {
 	align-items: baseline;
-	
 }
 
 .ProductPage-product-div-image {
 	overflow: hidden;
 	width: auto;
-	max-height: 40vw;
+	height: 40vw;
 	position: relative;
+	display: flex;
+	align-items: center;
 }
 
 .ProductPage-product-image {
 	max-width: 100%;
-	max-height: 35vw;
+	max-height: 100%;
 	width: auto;
 	height: 100%;
 	display: block;
@@ -122,7 +121,6 @@
 	border-radius: 0.7vw;
 	font-size: 1.5vw;
 }
-
 
 .ProductPage-product-buy-amount:focus {
 	outline: none;
@@ -179,7 +177,6 @@
 	background-color: #b3b4b4;
 	transition: 0.1s;
 }
-
 
 .ProductPage-product-share {
 	display: flex;

@@ -1,5 +1,5 @@
 import { observer } from 'mobx-react-lite';
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import ProductList from '../../components/product_list/ProductList';
 import Types from '../../components/types/Types';
 import { fetchCategories, fetchProducts } from '../../http/productAPI';
@@ -7,22 +7,28 @@ import { Context } from '../../index';
 import './css/Catalog.css';
 
 const Catalog = observer(() => {
+	const [inStock, setInStock] = useState(false);
 	const { product } = useContext(Context);
 
 	useEffect(() => {
 		fetchCategories().then((data) => product.setTypes(data));
-		fetchProducts(null, 100, 1).then((data) => {
+		fetchProducts(null, 100, 1, inStock).then((data) => {
 			product.setProducts(data.rows);
 			product.setTotalCount(data.count);
 		});
 	}, []);
 
+	const handleCheckbox = () => {
+		setInStock(!inStock);
+		console.log(inStock);
+	};
+
 	useEffect(() => {
-		fetchProducts(product.selectedType?.id, 100, 1).then((data) => {
+		fetchProducts(product.selectedType?.id, 100, 1, inStock).then((data) => {
 			product.setProducts(data.rows);
 			product.setTotalCount(data.count);
 		});
-	}, [product.selectedType]);
+	}, [product.selectedType, inStock]);
 
 	return (
 		<div className='Catalog-Main'>
@@ -41,7 +47,7 @@ const Catalog = observer(() => {
 					<div className='Catalog-Main-ItemsAndFilters-Filters-CheckBox'>
 						<label className='container'>
 							В наличии
-							<input type='checkbox'></input>
+							<input type='checkbox' onChange={handleCheckbox}></input>
 							<span className='checkmark'></span>
 						</label>
 					</div>
